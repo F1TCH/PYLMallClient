@@ -37,14 +37,15 @@
         font-size: 20px;
         color: #fff;
     }
+
 .contetn {
-     background:url(http://goo.gl/lb7wsF) center center no-repeat;
+    background: url(http://goo.gl/lb7wsF) center center no-repeat;
 }
 
 .login_page {
-    width:100%; 
-   height:100%; 
-   background:url(http://goo.gl/lb7wsF) center center no-repeat;
+    width: 100%;
+    height: 100%;
+    background: url(http://goo.gl/lb7wsF) center center no-repeat;
     border-color: red;
     font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
     margin-left: auto;
@@ -54,14 +55,14 @@
     .login_page h2 {
         font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 25px;
-        color:#ebeaea;
+        color: #ebeaea;
     }
 
-    .login_page h2,table,td {
+    .login_page h2, table, td {
         color: #ebeaea;
-    width: 422px;
-    margin-left: 360px;
-}
+        width: 422px;
+        margin-left: 360px;
+    }
 /*.login_container {
     
     
@@ -74,14 +75,21 @@
     margin-bottom: 0px;
 }*/
 
-    .loginBox ul {
-        list-style-type: none;
-        width: 300px;
-        font-weight: 700;
-    }
+.loginBox ul {
+    list-style-type: none;
+    width: 300px;
+    font-weight: 700;
+}
 
-    .login_table table {
-        margin: auto auto auto 33px;
-        height: 50px;
-        width: 284px;
-    }
+.login_table table {
+    margin: auto auto auto 33px;
+    height: 50px;
+    width: 284px;
+}
+
+.container .form-signin h2 {
+    color: #fff;
+    font-size: 48px;
+    font-family: 'Shift', sans-serif;
+    font-weight: bold;
+}
