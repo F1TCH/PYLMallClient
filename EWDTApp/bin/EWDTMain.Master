@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EWDTMain.master.cs" Inherits="EWDTApp.EWDTMain" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap1.css" rel="stylesheet" />
+    <link href="css/Masterpage.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="nav">
+            <div class="container">
+                <ul class="pull-left">
+                    <li><a href="#">TopJob Agency</a></li>
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul class="pull-right">
+                    <li"><a href="Login.aspx" id="A1" visible="true" runat="server">Login</a></li>
+                    <li><a href="#">Help</a></li>
+
+                    <li><a href="#" id="viewUnit" visible="false" runat="server">View Unit</a></li>
+                    <li><a href="#" id="viewCurrentBid" visible="false" runat="server">View Current Bids</a></li>
+                    <li><a href="Profile.aspx" id="profile" visible="false" runat="server">Profile</a></li>
+                    <li><a href="Logout.aspx" id="logout" visible="false" runat="server">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="contetn">
+            <asp:ContentPlaceHolder ID="content_body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+        </div>
+    </form>
+</body>
+</html>

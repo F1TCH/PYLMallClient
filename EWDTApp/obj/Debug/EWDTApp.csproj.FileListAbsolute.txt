@@ -1,0 +1,199 @@
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\EWDTApp.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\EWDTApp.pdb
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Antlr3.Runtime.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\EntityFramework.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Microsoft.Data.Edm.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Microsoft.Data.OData.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Newtonsoft.Json.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Spatial.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Helpers.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Http.OData.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Http.Tracing.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Mvc.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Optimization.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Providers.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Razor.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.WebPages.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\WebGrease.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\EntityFramework.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Newtonsoft.Json.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Helpers.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Mvc.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Razor.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.WebPages.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Http.Tracing.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Web.Http.OData.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Microsoft.Data.Edm.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\Microsoft.Data.OData.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\System.Spatial.xml
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\de\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\es\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\fr\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\it\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ja\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ko\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\ru\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\obj\Debug\EWDTApp.csprojResolveAssemblyReference.cache
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\obj\Debug\EWDTApp.dll
+C:\Users\Eldrich\Desktop\EWDTApp\EWDTApp\obj\Debug\EWDTApp.pdb
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EWDTApp.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EWDTApp.pdb
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Antlr3.Runtime.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EntityFramework.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Microsoft.Data.Edm.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Microsoft.Data.OData.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Microsoft.Web.Infrastructure.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Newtonsoft.Json.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Spatial.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Helpers.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Http.OData.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Http.Tracing.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Mvc.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Optimization.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Providers.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Razor.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.WebPages.Deployment.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.WebPages.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.WebPages.Razor.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\WebGrease.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EntityFramework.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Newtonsoft.Json.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Helpers.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Mvc.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Razor.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.WebPages.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.WebPages.Deployment.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.WebPages.Razor.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Http.Tracing.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Web.Http.OData.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Microsoft.Data.Edm.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Microsoft.Data.OData.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\System.Spatial.xml
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\de\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\es\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\it\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\de\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\es\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\fr\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\it\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ja\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ko\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ru\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\de\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\es\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\fr\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\it\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ja\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ko\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\ru\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\zh-Hans\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\zh-Hant\System.Spatial.resources.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\obj\Debug\EWDTApp.dll
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\obj\Debug\EWDTApp.pdb
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\Images\Paya-Lebar-Square.jpg
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EWDTMain.Master
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EWDTMain.Master.cs
+E:\TP-Stuffs\Enterprise Web Development and Testing(EWDT)\EWDTApp\EWDTApp\bin\EWDTMain.Master.designer.cs
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EWDTMain.Master
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Images\Paya-Lebar-Square.jpg
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EWDTMain.Master.cs
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EWDTMain.Master.designer.cs
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EWDTApp.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EWDTApp.pdb
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Antlr3.Runtime.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EntityFramework.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Microsoft.Data.Edm.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Microsoft.Data.OData.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Newtonsoft.Json.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Spatial.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Helpers.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Http.OData.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Http.Tracing.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Mvc.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Optimization.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Providers.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Razor.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.WebPages.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\WebGrease.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\EntityFramework.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Newtonsoft.Json.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Helpers.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Mvc.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Razor.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.WebPages.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Http.Tracing.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Web.Http.OData.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Microsoft.Data.Edm.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\Microsoft.Data.OData.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\System.Spatial.xml
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\de\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\es\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\fr\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\it\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ja\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ko\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\ru\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\obj\Debug\EWDTApp.dll
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\obj\Debug\EWDTApp.pdb
+C:\Users\Eldrich\Documents\GitHub\EWDTApp\EWDTApp\obj\Debug\EWDTApp.csprojResolveAssemblyReference.cache

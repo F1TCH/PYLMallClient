@@ -1,0 +1,28 @@
+﻿body {
+    background-image: url(/Images/Paya-Lebar-Square.jpg);
+    background-size: 2100px;
+}
+
+.Login {
+    width: 356px;
+    margin-top: 300px;
+    border-color: red;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+    .Login ul {
+        list-style-type: none;
+        width: 300px;
+        font-weight: 700;
+    }
+
+    .Login table {
+        margin: auto auto auto 33px;
+    height: 50px;
+    width: 344px;
+}

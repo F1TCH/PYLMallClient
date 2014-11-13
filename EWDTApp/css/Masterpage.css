@@ -1,0 +1,87 @@
+﻿.nav a {
+    color: #5a5a5a;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 14px 10px;
+    text-transform: uppercase;
+}
+
+.nav li {
+    display: inline;
+}
+
+.body footer {
+    font-size: 12px;
+}
+
+.jumbotron {
+    background-image: url('http://sgbestlaunch.com/wp-content/uploads/PayaLebarSquare.jpg');
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .jumbotron .container {
+        position: relative;
+        top: 100px;
+    }
+
+    .jumbotron h1 {
+        color: #fff;
+        font-size: 48px;
+        font-family: 'Shift', sans-serif;
+        font-weight: bold;
+    }
+
+    .jumbotron p {
+        font-size: 20px;
+        color: #fff;
+    }
+.contetn {
+     background:url(http://goo.gl/lb7wsF) center center no-repeat;
+}
+
+.login_page {
+    width:100%; 
+   height:100%; 
+   background:url(http://goo.gl/lb7wsF) center center no-repeat;
+    border-color: red;
+    font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .login_page h2 {
+        font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 25px;
+        color:#ebeaea;
+    }
+
+    .login_page h2,table,td {
+        color: #ebeaea;
+    width: 422px;
+    margin-left: 360px;
+}
+/*.login_container {
+    
+    
+    margin-top: 300px;
+    border-color: red;
+    color: black;
+    font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}*/
+
+    .loginBox ul {
+        list-style-type: none;
+        width: 300px;
+        font-weight: 700;
+    }
+
+    .login_table table {
+        margin: auto auto auto 33px;
+        height: 50px;
+        width: 284px;
+    }
