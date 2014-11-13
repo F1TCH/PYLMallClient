@@ -60,7 +60,7 @@
 
     .login_page h2, table, td {
         color: #ebeaea;
-        width: 422px;
+        width: 575px;
         margin-left: 360px;
     }
 /*.login_container {
@@ -89,7 +89,14 @@
 
 .container .form-signin h2 {
     color: #fff;
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Shift', sans-serif;
     font-weight: bold;
 }
+
+.container .form-signin h3 {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Shift', sans-serif;
+}
+

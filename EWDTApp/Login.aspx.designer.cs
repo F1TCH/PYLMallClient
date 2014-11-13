@@ -49,6 +49,15 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.TextBox tbxSignUpUser;
         
         /// <summary>
+        /// tbxNric control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbxNric;
+        
+        /// <summary>
         /// tbxSignUpPass control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace EWDTApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxSignUpPass;
+        
+        /// <summary>
+        /// ddlGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGender;
         
         /// <summary>
         /// tbxSignUpEmail control.
