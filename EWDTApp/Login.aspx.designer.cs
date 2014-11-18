@@ -58,6 +58,15 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.TextBox tbxNric;
         
         /// <summary>
+        /// DropDownList1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        
+        /// <summary>
         /// tbxSignUpPass control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.DropDownList ddlGender;
         
         /// <summary>
+        /// tbxSQAnswer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbxSQAnswer1;
+        
+        /// <summary>
         /// tbxSignUpEmail control.
         /// </summary>
         /// <remarks>
@@ -92,6 +110,15 @@ namespace EWDTApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxSignUpTeleNo;
+        
+        /// <summary>
+        /// tbxDOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbxDOB;
         
         /// <summary>
         /// tbxSignUpHpNo control.

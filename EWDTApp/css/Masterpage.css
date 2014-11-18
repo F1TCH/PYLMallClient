@@ -60,9 +60,10 @@
 
     .login_page h2, table, td {
         color: #ebeaea;
-        width: 575px;
+        width: 1172px;
         margin-left: 360px;
-    }
+    margin-right: 0px;
+}
 /*.login_container {
     
     
