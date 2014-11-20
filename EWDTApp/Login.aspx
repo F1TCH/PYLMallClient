@@ -110,6 +110,9 @@
                 <td>
                     <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control"></asp:TextBox>
 
+                    <ajaxToolkit:CalendarExtender ID="tbxDOB_CalendarExtender" runat="server" TargetControlID="tbxDOB">
+                    </ajaxToolkit:CalendarExtender>
+
                 </td>
             </tr>
             <tr>

@@ -41,7 +41,10 @@
             <asp:ContentPlaceHolder ID="content_body" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-        <div class="clear"></div>
+        <div class="clear">
+            <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+            </ajaxToolkit:ToolkitScriptManager>
+        </div>
         <div class="footer">
         </div>
     </form>
