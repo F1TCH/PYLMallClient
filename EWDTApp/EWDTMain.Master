@@ -31,7 +31,7 @@
 
                     <li><a href="#" id="viewUnit" visible="false" runat="server">View Unit</a></li>
                     <li><a href="#" id="viewCurrentBid" visible="false" runat="server">View Current Bids</a></li>
-                    <li><a href="Profile.aspx" id="profile" visible="false" runat="server">Profile</a></li>
+                    <li><a href="ProfilePage.aspx" id="profile" visible="false" runat="server">Profile</a></li>
                     <li><a href="Logout.aspx" id="logout" visible="false" runat="server">Logout</a></li>
                 </ul>
             </div>

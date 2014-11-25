@@ -9,11 +9,20 @@
         }
 
         .auto-style2 {
-            width: 755px;
+            width: 1000px;
         }
 
         .auto-style3 {
             width: 299px;
+        }
+        .auto-style4 {
+            width: 1421px;
+        }
+        .auto-style5 {
+            width: 1000px;
+        }
+        .auto-style6 {
+            width: 1020px;
         }
     </style>
 </asp:Content>
@@ -57,19 +66,19 @@
 
         <%--Sign Up--%>
         <h2>&nbsp;Sign Up</h2>
-        <table style="table-layout: auto; width: 1000px;">
+        <table style="table-layout: auto; width: 1500px;">
             <tr>
                 <td class="auto-style1">Username: </td>
                 <td>
                     <asp:TextBox ID="tbxSignUpUser" runat="server" CssClass="form-control"></asp:TextBox></td>
                 <td class="auto-style2">&nbsp;</td>
-                <td>NRIC:</td>
-                <td>
-                    <asp:TextBox ID="tbxNric" runat="server" CssClass="form-control"></asp:TextBox></td>
+                <td class="auto-style6">NRIC:</td>
+                <td class="auto-style5">
+                    <asp:TextBox ID="tbxNric" runat="server" CssClass="form-control" Width="150px"></asp:TextBox></td>
                 <td></td>
-                <td>Secret Question 1: </td>
+                <td class="auto-style4">Secret Question 1: </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="19px" Width="121px">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="19px" Width="300px" ForeColor="Black">
                         <asp:ListItem>What is the name of your first pet?</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -79,41 +88,50 @@
                 <td>
                     <asp:TextBox ID="tbxSignUpPass" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </td>
-                <td></td>
-                <td>Gender: </td>
-                <td>
-                    <asp:DropDownList ID="ddlGender" runat="server">
+                <td class="auto-style2"></td>
+                <td class="auto-style6">Gender: </td>
+                <td class="auto-style5">
+                    <asp:DropDownList ID="ddlGender" runat="server" ForeColor="Black">
                         <asp:ListItem>Male</asp:ListItem>
                         <asp:ListItem>Female</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td></td>
-                <td>Answer: </td>
+                <td class="auto-style4">Answer: </td>
                 <td>
-                    <asp:TextBox ID="tbxSQAnswer1" runat="server" CssClass="form-control"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxSQAnswer1" runat="server" CssClass="form-control" Width="272px"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Email Address: </td>
                 <td>
                     <asp:TextBox ID="tbxSignUpEmail" runat="server" CssClass="form-control"></asp:TextBox></td>
+                <td class="auto-style2"></td>
+                <td class="auto-style6">Address: </td>
+                <td class="auto-style5">
+                    <textarea id="txtareaAddress" class="form-control" rows="3" style="width: 609px; height: 65px"></textarea></td>
                 <td></td>
-                <td>Address: </td>
+                <td class="auto-style4">Secret Question 2: </td>
                 <td>
-                    <textarea id="txtareaAddress" class="form-control" rows="3"></textarea></td>
+                    <asp:DropDownList ID="DropDownList2" runat="server" Height="19px" Width="300px" ForeColor="Black">
+                        <asp:ListItem>What is your mother&#39;s maiden name?</asp:ListItem>
+                    </asp:DropDownList></td>
             </tr>
             <tr>
                 <td>Telephone Number: </td>
                 <td>
                     <asp:TextBox ID="tbxSignUpTeleNo" runat="server" CssClass="form-control"></asp:TextBox></td>
-                <td></td>
-                <td>Date Of Birth</td>
-                <td>
-                    <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control"></asp:TextBox>
+                <td class="auto-style2"></td>
+                <td class="auto-style6">Date Of Birth</td>
+                <td class="auto-style5">
+                    <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control" Width="150px"></asp:TextBox>
 
                     <ajaxToolkit:CalendarExtender ID="tbxDOB_CalendarExtender" runat="server" TargetControlID="tbxDOB">
                     </ajaxToolkit:CalendarExtender>
 
                 </td>
+                <td></td>
+                <td class="auto-style4">Answer: </td>
+                <td><asp:TextBox ID="tbxSQAnswer2" runat="server" CssClass="form-control" Width="272px"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Handphone Number: </td>
@@ -131,7 +149,7 @@
             <tr>
                 <td class="auto-style1">&nbsp;&nbsp;&nbsp; &nbsp; </td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnSignUp" runat="server" Text="Login" Width="81px" CssClass="btn btn-default" OnClick="btnSignUp_Click" /></td>
+                        <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" Width="81px" CssClass="btn btn-default" OnClick="btnSignUp_Click" /></td>
             </tr>
             <tr>
                 <td></td>

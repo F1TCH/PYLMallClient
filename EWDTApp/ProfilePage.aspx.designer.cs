@@ -10,159 +10,150 @@
 namespace EWDTApp {
     
     
-    public partial class WebForm2 {
+    public partial class WebForm4 {
         
         /// <summary>
-        /// tbxUsername control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxUsername;
+        protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// tbxPassword control.
+        /// lblNRIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxPassword;
+        protected global::System.Web.UI.WebControls.Label lblNRIC;
         
         /// <summary>
-        /// btnLogin control.
+        /// lblDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Label lblDOB;
         
         /// <summary>
-        /// tbxSignUpUser control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSignUpUser;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// tbxNric control.
+        /// lblHandphone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxNric;
+        protected global::System.Web.UI.WebControls.Label lblHandphone;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// lblTele control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Label lblTele;
         
         /// <summary>
-        /// tbxSignUpPass control.
+        /// lblGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSignUpPass;
+        protected global::System.Web.UI.WebControls.Label lblGender;
         
         /// <summary>
-        /// ddlGender control.
+        /// lblAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGender;
+        protected global::System.Web.UI.WebControls.Label lblAddress;
         
         /// <summary>
-        /// tbxSQAnswer1 control.
+        /// lblQualification control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSQAnswer1;
+        protected global::System.Web.UI.WebControls.Label lblQualification;
         
         /// <summary>
-        /// tbxSignUpEmail control.
+        /// lblWorkExperience control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSignUpEmail;
+        protected global::System.Web.UI.WebControls.Label lblWorkExperience;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// lblUniquekey control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.Label lblUniquekey;
         
         /// <summary>
-        /// tbxSignUpTeleNo control.
+        /// lblAdditionalInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSignUpTeleNo;
+        protected global::System.Web.UI.WebControls.Label lblAdditionalInfo;
         
         /// <summary>
-        /// tbxDOB control.
+        /// btnCreateprofile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxDOB;
+        protected global::System.Web.UI.WebControls.Button btnCreateprofile;
         
         /// <summary>
-        /// tbxDOB_CalendarExtender control.
+        /// btnEditprofile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender tbxDOB_CalendarExtender;
+        protected global::System.Web.UI.WebControls.Button btnEditprofile;
         
         /// <summary>
-        /// tbxSQAnswer2 control.
+        /// btnPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSQAnswer2;
+        protected global::System.Web.UI.WebControls.Button btnPassword;
         
         /// <summary>
-        /// tbxSignUpHpNo control.
+        /// btnDeleteprofile1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSignUpHpNo;
-        
-        /// <summary>
-        /// btnSignUp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUp;
+        protected global::System.Web.UI.WebControls.Button btnDeleteprofile1;
     }
 }
