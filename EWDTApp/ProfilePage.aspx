@@ -89,11 +89,11 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <asp:Button ID="btnCreateprofile" runat="server" class="btn btn-success btn-block" Text="Create Profile" OnClick="btnCreateprofile_Click" />
-                                    <asp:Button ID="btnEditprofile" runat="server" class="btn btn-warning btn-block" Text="Edit Profile" OnClick="btnEditprofile_Click" />
-                                    <asp:Button ID="btnPassword" runat="server" class="btn btn-info btn-block" Text="Change Password" OnClick="btnPassword_Click" />
+                                    <asp:Button ID="btnCreateprofile" runat="server" class="btn btn-success btn-block" Text="Create Profile" />
+                                    <asp:Button ID="btnEditprofile" runat="server" class="btn btn-warning btn-block" Text="Edit Profile"  />
+                                    <asp:Button ID="btnPassword" runat="server" class="btn btn-info btn-block" Text="Change Password" />
                                     <br />
-                                    <asp:Button ID="btnDeleteprofile1" runat="server" class="btn btn-danger btn-block" Text="Delete Profile" OnClick="btnDeleteprofile1_Click" />
+                                    <asp:Button ID="btnDeleteprofile1" runat="server" class="btn btn-danger btn-block" Text="Delete Profile" />
                                 </div>
                             </div>
                         </div>
