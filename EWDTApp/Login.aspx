@@ -13,7 +13,7 @@
         }
 
         .auto-style3 {
-            width: 299px;
+            width: 177px;
         }
         .auto-style4 {
             width: 1421px;
@@ -31,16 +31,16 @@
         <div class="loginBox">
             <br />
             <h2>&nbspLogin</h2>
-            <table>
+            <table class="loginTable">
                 <tr>
                     <td class="auto-style3">&nbsp;&nbsp; Username: </td>
                     <td>
-                        <asp:TextBox ID="tbxUsername" runat="server" CssClass="form-control" Width="270px"></asp:TextBox></td>
+                        <asp:TextBox ID="tbxUsername" runat="server" CssClass="form-control" Width="213px"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;&nbsp; Password : </td>
                     <td>
-                        <asp:TextBox ID="tbxPassword" runat="server" CssClass="form-control" TextMode="Password" Width="270px"></asp:TextBox>
+                        <asp:TextBox ID="tbxPassword" runat="server" CssClass="form-control" TextMode="Password" Width="213px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -51,7 +51,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;&nbsp;&nbsp; <a href="#">Forget Password</a>&nbsp;&nbsp; </td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td>&nbsp;&nbsp;<asp:Label ID="lblStatus" runat="server"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Login" Width="81px" CssClass="btn btn-default" OnClick="btnLogin_Click" /></td>
                 </tr>
                 <tr>
@@ -66,7 +66,7 @@
 
         <%--Sign Up--%>
         <h2>&nbsp;Sign Up</h2>
-        <table style="table-layout: auto; width: 1500px;">
+        <table class="loginTablebtm" style="table-layout: auto; width: 1500px;">
             <tr>
                 <td class="auto-style1">Username: </td>
                 <td>
@@ -108,7 +108,7 @@
                 <td class="auto-style2"></td>
                 <td class="auto-style6">Address: </td>
                 <td class="auto-style5">
-                    <textarea id="txtareaAddress" class="form-control" rows="3" style="width: 609px; height: 65px"></textarea></td>
+                    <asp:TextBox ID="tbxAddress" runat="server" CssClass="form-control" Width="150px"></asp:TextBox></td>
                 <td></td>
                 <td class="auto-style4">Secret Question 2: </td>
                 <td>

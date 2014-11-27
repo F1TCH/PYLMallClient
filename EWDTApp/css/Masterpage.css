@@ -40,6 +40,7 @@
 
 .contetn {
     background: url(http://goo.gl/lb7wsF) center center no-repeat;
+    color: #ebeaea;
 }
 
 .login_page {
@@ -58,15 +59,14 @@
         color: #ebeaea;
     }
 
-    .login_page h2, table, td {
-        color: #ebeaea;
-        width: 1172px;
-        margin-left: 360px;
-        margin-right: 0px;
-    }
+        .login_page h2, .loginTable, .loginTablebtm{
+            width: 1172px;
+            margin-left: 360px;
+            margin-right: 0px;
+        }
+
+
 /*.login_container {
-    
-    
     margin-top: 300px;
     border-color: red;
     color: black;
