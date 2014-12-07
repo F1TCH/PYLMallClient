@@ -24,6 +24,7 @@
                                     <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle" />
                                 </div>
                                 <br />
+                                <br />
                                 <div class="profileTable">
                                     <table class="table table-bordered table-striped" >
                                         
