@@ -262,7 +262,6 @@ C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\ko\System.Spatial.re
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\ru\System.Spatial.resources.dll
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.csprojResolveAssemblyReference.cache
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.dll
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.pdb
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\AjaxControlToolkit.dll

@@ -85,42 +85,6 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.Label lblAddress;
         
         /// <summary>
-        /// lblQualification control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQualification;
-        
-        /// <summary>
-        /// lblWorkExperience control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWorkExperience;
-        
-        /// <summary>
-        /// lblUniquekey control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUniquekey;
-        
-        /// <summary>
-        /// lblAdditionalInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAdditionalInfo;
-        
-        /// <summary>
         /// btnCreateprofile control.
         /// </summary>
         /// <remarks>

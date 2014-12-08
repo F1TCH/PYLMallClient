@@ -7,6 +7,10 @@ using System.Web.UI.WebControls;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using EWDTWebServiceApp.Models;
+using System;
+using System.Net;
+using System.Net.Mail;
+using SendGrid;
 
 namespace EWDTApp
 {
@@ -44,9 +48,9 @@ namespace EWDTApp
             }
             else
             {
-                lblResult.Text = "Could not retrieve music. Error code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString();
+                Response.Write("Could not retrieve music. Error code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString());
             }
-
+            
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)

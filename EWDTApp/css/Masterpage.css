@@ -43,6 +43,11 @@
     color: #ebeaea;
 }
 
+.profilePage, .profileTable {
+    background: url(http://goo.gl/lb7wsF) center center no-repeat;
+    color: #ebeaea;
+}
+
 .login_page {
     width: 100%;
     height: 100%;
@@ -59,11 +64,11 @@
         color: #ebeaea;
     }
 
-        .login_page h2, .loginTable, .loginTablebtm{
-            width: 1172px;
-            margin-left: 360px;
-            margin-right: 0px;
-        }
+    .login_page h2, .loginTable, .loginTablebtm {
+        width: 1172px;
+        margin-left: 360px;
+        margin-right: 0px;
+    }
 
 
 /*.login_container {
