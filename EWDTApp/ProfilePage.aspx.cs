@@ -13,20 +13,5 @@ namespace EWDTApp
         {
 
         }
-
-        protected void btnPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnEditprofile_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnCreateprofile_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

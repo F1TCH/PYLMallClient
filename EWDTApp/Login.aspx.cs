@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using EWDTWebServiceApp.Models;
-using System;
 using System.Net;
 using System.Net.Mail;
 using SendGrid;
