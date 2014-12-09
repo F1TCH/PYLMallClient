@@ -10,7 +10,6 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="content_body" runat="server">
-
     <div class="profilePage">
         <div class="containerProfile">
             <div>

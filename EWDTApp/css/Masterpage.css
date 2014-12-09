@@ -6,6 +6,7 @@
     text-transform: uppercase;
 }
 
+
 .nav li {
     display: inline;
 }
@@ -38,14 +39,16 @@
         color: #fff;
     }
 
-.contetn {
-    background: url(http://goo.gl/lb7wsF) center center no-repeat;
+.contetn, .content_body {
+    background: gray;
     color: #ebeaea;
 }
 
 .profilePage, .profileTable {
     background: url(http://goo.gl/lb7wsF) center center no-repeat;
     color: #ebeaea;
+    font-family: "ProximaNovaSemiBold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
 }
 
 .login_page {
