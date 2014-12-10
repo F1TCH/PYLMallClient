@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EWDTWebServiceApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,7 @@ namespace EWDTApp
 
         protected void btnViewBid_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ViewBid.aspx?");
         }
     }
 }

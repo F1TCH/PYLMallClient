@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EWDTWebServiceApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,7 +17,13 @@ namespace EWDTApp
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("UpdateBid.aspx");
+            //BidClass editBid = new BidClass();
+            //editBid.BiddingAmt = Convert.ToDouble(Label1.Text);
+            //editBid.Date = Label2.Text;
+            //editBid.Time = Label3.Text;
+
+            //RentDBManager.UpdateBid(editBid);
+            //Response.Redirect("ViewBid.aspx?");
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)

@@ -16,19 +16,19 @@
 
         <table class="auto-style1" border="1">
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Bidding Amount</td>
+                <td>Date</td>
+                <td>Time</td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label3" runat="server" Text=""></asp:Label></td>
+                    $ 4468.00</td>
                 <td>
-                    <asp:Label ID="Label2" runat="server" Text=""></asp:Label></td>
+                    11-12-2014</td>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text=""></asp:Label></td>
+                    3:30 a.m</td>
                 <td>
                     <asp:Button ID="btnUpdate" runat="server" Text="Update" ForeColor="Black" OnClick="btnUpdate_Click" /></td>
                 <td>

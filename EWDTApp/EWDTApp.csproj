@@ -309,6 +309,20 @@
     <Compile Include="ViewUnit.aspx.designer.cs">
       <DependentUpon>ViewUnit.aspx</DependentUpon>
     </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -408,6 +422,8 @@
     <Content Include="UpdateBid.aspx" />
     <Content Include="ViewBid.aspx" />
     <Content Include="ViewUnit.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="FAQ.aspx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\Paya-Lebar-Square.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -462,6 +478,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Image Files\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

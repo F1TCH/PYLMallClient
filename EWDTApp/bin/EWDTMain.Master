@@ -22,8 +22,8 @@
                 <ul class="pull-left">
                     <li><a href="#">TopJob Agency</a></li>
                     <li><a href="Home.aspx">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="About.aspx">About</a></li>
+                    <li><a href="FAQ.aspx">FAQ</a></li>
                 </ul>
                 <ul class="pull-right">
                     <li"><a href="Login.aspx" id="A1" visible="true" runat="server">Login / Sign Up</a></li>

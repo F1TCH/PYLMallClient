@@ -8,6 +8,27 @@
             height: 424px;
             width: 506px;
         }
+    .auto-style2 {
+        width: 398px;
+    }
+    .auto-style3 {
+        width: 331px;
+    }
+    .auto-style4 {
+        width: 432px;
+    }
+    .auto-style5 {
+        width: 398px;
+        height: 35px;
+    }
+    .auto-style6 {
+        width: 331px;
+        height: 35px;
+    }
+    .auto-style7 {
+        width: 432px;
+        height: 35px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="content_body" runat="server">
@@ -34,19 +55,25 @@
             <asp:Button ID="btnView" runat="server" Text="View" Height="24px" Width="66px" ForeColor="Black" Font-Bold="True" Font-Size="15px"/><br />
             <table style="width:100%;">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">Price (Minimum bid):</td>
+                    <td class="auto-style3">Unit Level:</td>
+                    <td class="auto-style4">Unit:</td>
+                    <td class="auto-style4">Condition:</td>
+                    <td class="auto-style4">Unit Images:</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style5">$ 4250</td>
+                    <td class="auto-style6">01</td>
+                    <td class="auto-style7">01-01</td>
+                    <td class="auto-style7">New </td>
+                    <td class="auto-style7"></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style4">&nbsp;</td>
                 </tr>
             </table>
             <br />
