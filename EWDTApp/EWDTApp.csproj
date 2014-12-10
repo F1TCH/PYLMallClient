@@ -245,6 +245,34 @@
     <Compile Include="ProfilePage.aspx.designer.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreateProfile.aspx.cs">
+      <DependentUpon>CreateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateProfile.aspx.designer.cs">
+      <DependentUpon>CreateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProfilePage.aspx.cs">
+      <DependentUpon>UpdateProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateProfilePage.aspx.designer.cs">
+      <DependentUpon>UpdateProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeEmailAddress.aspx.cs">
+      <DependentUpon>ChangeEmailAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeEmailAddress.aspx.designer.cs">
+      <DependentUpon>ChangeEmailAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -335,6 +363,10 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="ProfilePage.aspx" />
+    <Content Include="CreateProfile.aspx" />
+    <Content Include="UpdateProfilePage.aspx" />
+    <Content Include="ChangeEmailAddress.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\Paya-Lebar-Square.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

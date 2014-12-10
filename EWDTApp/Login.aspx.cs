@@ -49,7 +49,7 @@ namespace EWDTApp
             {
                 Response.Write("Could not retrieve music. Error code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString());
             }
-            
+
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace EWDTApp
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var m = new UserClass() { Username = tbxUsername.Text, Password = tbxPassword.Text, Email = tbxSignUpEmail.Text, TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text), HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text), NRIC = tbxNric.Text, Gender = ddlGender.Text, Address = tbxAddress.Text, DoB = tbxDOB.Text, SQ1 = DropDownList1.Text, SQAns1 = tbxSQAnswer1.Text, SQ2 = DropDownList2.Text, SQAns2 = tbxSQAnswer2.Text};
+            var m = new UserClass() { Username = tbxUsername.Text, Password = tbxPassword.Text, Email = tbxSignUpEmail.Text, TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text), HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text), NRIC = tbxNric.Text, Gender = ddlGender.Text, Address = tbxAddress.Text, DoB = tbxDOB.Text, SQ1 = DropDownList1.Text, SQAns1 = tbxSQAnswer1.Text, SQ2 = DropDownList2.Text, SQAns2 = tbxSQAnswer2.Text };
 
             HttpResponseMessage response = client.PostAsJsonAsync("api/UserClass", m).Result;
             if (response.IsSuccessStatusCode)

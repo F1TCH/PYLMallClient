@@ -13,5 +13,15 @@ namespace EWDTApp
         {
 
         }
+
+        protected void btnCreateProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateProfile.aspx");
+        }
+
+        protected void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateProfilePage.aspx");
+        }
     }
 }
