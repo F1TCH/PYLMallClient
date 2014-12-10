@@ -25,11 +25,11 @@ namespace EWDTApp
             string i_username = tbxUsername.Text;
             string i_password = tbxPassword.Text;
 
-            if (i_username.Equals("Admin"))
-            {
-                Session["username"] = "Admin";
-                Response.Redirect("Home.aspx");
-            }
+            //if (i_username.Equals("Admin"))
+            //{
+            //    Session["username"] = "Admin";
+            //    Response.Redirect("Home.aspx");
+            //}
 
             HttpClient client = new HttpClient();
 
@@ -38,11 +38,13 @@ namespace EWDTApp
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = client.GetAsync("api/UserAccount/" + tbxUsername.Text).Result;
+            HttpResponseMessage response = client.GetAsync("api/user/" + tbxUsername.Text).Result;
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking! 
                 var m = response.Content.ReadAsAsync<UserAccount>().Result;
+                Session["username"] = tbxUsername.Text;
+                Response.Redirect("Home.aspx");
                 // password for login
             }
             else
@@ -61,13 +63,13 @@ namespace EWDTApp
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var m = new UserClass() { Username = tbxUsername.Text, Password = tbxPassword.Text, Email = tbxSignUpEmail.Text, TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text), HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text), NRIC = tbxNric.Text, Gender = ddlGender.Text, Address = tbxAddress.Text, DoB = tbxDOB.Text, SQ1 = DropDownList1.Text, SQAns1 = tbxSQAnswer1.Text, SQ2 = DropDownList2.Text, SQAns2 = tbxSQAnswer2.Text };
+            var m = new UserAccount() { username = tbxSignUpUser.Text, password = tbxSignUpPass.Text, email = tbxSignUpEmail.Text };
 
-            HttpResponseMessage response = client.PostAsJsonAsync("api/UserClass", m).Result;
+            HttpResponseMessage response = client.PostAsJsonAsync("api/user", m).Result;
             if (response.IsSuccessStatusCode)
             {
                 //Uri gizmoUri = response.Headers.Location;
-                lblStatus.Text = "Music created.";
+                Response.Redirect("Home.aspx");
             }
             else
             {

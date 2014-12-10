@@ -280,7 +280,7 @@
     <Compile Include="DeleteProfilePage.aspx.designer.cs">
       <DependentUpon>DeleteProfilePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserAccount.cs" />
+    <Compile Include="Class\UserAccount.cs" />
     <Compile Include="CreateBid.aspx.cs">
       <DependentUpon>CreateBid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

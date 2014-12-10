@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="btnChangeEmail" runat="server" Text="Change Email Address" ForeColor="Black"/>
+                        <asp:Button ID="btnChangeEmail" runat="server" Text="Change Email Address" ForeColor="Black" OnClick="btnChangeEmail_Click"/>
                         <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" ForeColor="Black" />
                     </td>
                     <td>
@@ -66,7 +66,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><asp:Button ID="btnDelete" runat="server" Text="Delete" ForeColor="Black" OnClick="btnDelete_Click"/>
+                        <asp:Label ID="lblStatus" runat="server" Text =""></asp:Label>
+                    </td>
                     <td>
                     <asp:Button ID="btnDeleteProfile" runat="server" Text="Delete Profile" ForeColor="Black" OnClick="btnDeleteProfile_Click" />
                     </td>

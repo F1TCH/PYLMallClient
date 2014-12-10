@@ -31,7 +31,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnChange" runat="server" Text ="Change Email Address" ForeColor="Black" />
+                        <asp:Button ID="btnChange" runat="server" Text ="Change Email Address" ForeColor="Black" OnClick="btnChange_Click" />
                     </td>
                 </tr>
                 <tr>
