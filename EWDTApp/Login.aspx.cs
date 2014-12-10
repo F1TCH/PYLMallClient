@@ -38,16 +38,16 @@ namespace EWDTApp
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = client.GetAsync("api/UserClass/" + tbxUsername.Text).Result;
+            HttpResponseMessage response = client.GetAsync("api/UserAccount/" + tbxUsername.Text).Result;
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking! 
-                var m = response.Content.ReadAsAsync<UserClass>().Result;
+                var m = response.Content.ReadAsAsync<UserAccount>().Result;
                 // password for login
             }
             else
             {
-                Response.Write("Could not retrieve music. Error code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString());
+                Response.Write("Could not retrieve account. Error code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString());
             }
 
         }

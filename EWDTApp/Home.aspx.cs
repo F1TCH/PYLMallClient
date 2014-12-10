@@ -13,5 +13,10 @@ namespace EWDTApp
         {
 
         }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            Session["portnumber"] = tbxSessionNumber.Text;
+        }
     }
 }

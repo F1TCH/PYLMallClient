@@ -68,7 +68,7 @@
                 <tr>
                     <td></td>
                     <td>
-                    <asp:Button ID="btnDeleteProfile" runat="server" Text="Delete Profile" ForeColor="Black" />
+                    <asp:Button ID="btnDeleteProfile" runat="server" Text="Delete Profile" ForeColor="Black" OnClick="btnDeleteProfile_Click" />
                     </td>
                 </tr>
             </table>

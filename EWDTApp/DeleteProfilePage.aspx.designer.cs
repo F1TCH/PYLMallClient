@@ -10,33 +10,42 @@
 namespace EWDTApp {
     
     
-    public partial class WebForm1 {
+    public partial class WebForm9 {
         
         /// <summary>
-        /// lblSessionName control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSessionName;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// tbxSessionNumber control.
+        /// lblText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxSessionNumber;
+        protected global::System.Web.UI.WebControls.Label lblText;
         
         /// <summary>
-        /// btnSave control.
+        /// btnDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
+        /// btnBack control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBack;
     }
 }

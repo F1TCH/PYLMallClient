@@ -10,6 +10,17 @@
         <div class="container">
             <h1>Find a place to rent.</h1>
             <p>Rent from us from over more than 19'000 units.</p>
+
+            <table>
+                <tr>
+                    <td><asp:Label ID="lblSessionName" runat="server" Text="Session Number:" ForeColor="Black"></asp:Label></td>
+                    <td><asp:TextBox ID="tbxSessionNumber" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><asp:Button ID="btnSave" runat="server" Text="Save Session" ForeColor="Black" OnClick="btnSave_Click" /></td>
+                </tr>
+            </table>
         </div>
     </div>
 </asp:Content>
