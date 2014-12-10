@@ -54,7 +54,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnUpdateProfile" runat="server" Text="Update now!" ForeColor="Black" />
+                        <asp:Button ID="btnUpdateProfile" runat="server" Text="Update now!" ForeColor="Black" OnClick="btnUpdateProfile_Click" />
                     </td>
                 </tr>
                 <tr>

@@ -16,7 +16,7 @@
 
         <table class="auto-style1" border="1">
             <tr>
-                <td>Bidding Amount</td>
+                <td>Bidding Amount <asp:Label ID="lblBA" runat="server" Text=""></asp:Label></td>
                 <td>Date</td>
                 <td>Time</td>
                 <td></td>

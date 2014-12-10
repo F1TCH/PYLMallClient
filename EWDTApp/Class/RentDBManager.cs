@@ -25,7 +25,7 @@ namespace EWDTWebServiceApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "INSERT INTO Bid(BiddingAmt,Time,Date)" +
+                comm.CommandText = "INSERT INTO Bidding(BiddingAmt,Time,Date)" +
                     " VALUES (@BiddingAmt,@Time,@Date)";
                 comm.Parameters.AddWithValue("@BiddingAmt", c.BiddingAmt);
                 comm.Parameters.AddWithValue("@Time", c.Time);
@@ -51,7 +51,7 @@ namespace EWDTWebServiceApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * FROM Bid";
+                comm.CommandText = "SELECT * FROM Bidding";
 
                 comm.Parameters.AddWithValue("@BiddingAmt", r.BiddingAmt);
                 comm.Parameters.AddWithValue("@Time", r.Time);
@@ -78,7 +78,7 @@ namespace EWDTWebServiceApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE Bid SET BiddingAmt=@BiddingAmt,Time=@Time,Date=@Date";
+                comm.CommandText = "UPDATE Bidding SET BiddingAmt=@BiddingAmt,Time=@Time,Date=@Date where BiddingAmt = '4468'";
 
                 comm.Parameters.AddWithValue("@BiddingAmt", u.BiddingAmt);
                 comm.Parameters.AddWithValue("@Time", u.Time);
@@ -104,7 +104,7 @@ namespace EWDTWebServiceApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "DELETE * where BiddingAmt=@BiddingAmt";
+                comm.CommandText = "DELETE * FROM bidding where BiddingAmt=@BiddingAmt";
                 comm.Parameters.AddWithValue("@BiddingAmt", biddingamt);
                 rowsdeleted = comm.ExecuteNonQuery();
             }
@@ -216,7 +216,7 @@ namespace EWDTWebServiceApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "DELETE * where Unit=@Unit";
+                comm.CommandText = "DELETE * FROM Floorplan where Unit=@Unit";
                 comm.Parameters.AddWithValue("@Unit", unit);
                 rowsdeleted = comm.ExecuteNonQuery();
             }

@@ -25,11 +25,11 @@ namespace EWDTApp
             string i_username = tbxUsername.Text;
             string i_password = tbxPassword.Text;
 
-            //if (i_username.Equals("Admin"))
-            //{
-            //    Session["username"] = "Admin";
-            //    Response.Redirect("Home.aspx");
-            //}
+            if (i_username.Equals("Admin"))
+            {
+                Session["username"] = "Admin";
+                Response.Redirect("Home.aspx");
+            }
 
             HttpClient client = new HttpClient();
 

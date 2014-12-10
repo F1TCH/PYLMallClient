@@ -31,7 +31,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnChange" runat="server" Text ="Change Password now" ForeColor="Black" />
+                        <asp:Button ID="btnChange" runat="server" Text ="Change Password now" ForeColor="Black" OnClick="btnChange_Click" />
                     </td>
                 </tr>
                 <tr>

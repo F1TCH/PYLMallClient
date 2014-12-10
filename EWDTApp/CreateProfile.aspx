@@ -55,7 +55,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnCreateProfile" runat="server" Text="Create" ForeColor="Black" />
+                        <asp:Button ID="btnCreateProfile" runat="server" Text="Create" ForeColor="Black" OnClick="btnCreateProfile_Click" />
                     </td>
                 </tr>
                 <tr>
