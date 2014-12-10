@@ -281,6 +281,13 @@
       <DependentUpon>DeleteProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserAccount.cs" />
+    <Compile Include="CreateBid.aspx.cs">
+      <DependentUpon>CreateBid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateBid.aspx.designer.cs">
+      <DependentUpon>CreateBid.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -376,6 +383,7 @@
     <Content Include="ChangeEmailAddress.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="DeleteProfilePage.aspx" />
+    <Content Include="CreateBid.aspx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\Paya-Lebar-Square.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

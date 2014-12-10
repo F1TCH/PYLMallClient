@@ -15,6 +15,11 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        public void sendMail(/*List<String> recipients*/)
+        {
             //Create the email object first, then add the properties.
             var myMessage = new SendGridMessage();
 
@@ -22,14 +27,17 @@ namespace EWDTApp
 
             myMessage.From = new MailAddress("john@example.com");
 
+
+
             //Add multiple addresses to the To Field.
             List<String> recipients = new List<String>
 
             {
-                // @"Jeff Smith <Jeff@example.com>",
-                // @"Anna Lidman <anna@example.com>",
-                // @"Peter Chow <peter@example.com>",
+                @"Phee Yong Xiang <pheeyx123@gmail.com",
+                @"Phee Yong han <pheeyonghan@gmail.com>",
+                @"Tim Lim <timlim_95@yahooo.com>",
             };
+
 
             myMessage.AddTo(recipients);
 
@@ -53,6 +61,10 @@ namespace EWDTApp
 
             var credentials = new NetworkCredential(username, pswd);
 
+        }
+
+        public void sendMailByAPI()
+        {
             /* The following examples show how to send a message using the web API */
 
             // Create the email object first, then add the properties.
@@ -71,7 +83,10 @@ namespace EWDTApp
             // Send the email.
             // You can also use the **DeliverAsync** method, which returns an awaitable task.
             transportWeb.Deliver(myMessage1);
+        }
 
+        public void miscFunc()
+        {
             /* Attachments can be added to a message by calling the AddAttachment method and specifying the name and path of the file you want to attach. You can include multiple attachments by calling this method once for each file you wish to attach. The following example demonstrates adding an attachment to a message:*/
             SendGridMessage myMessage2 = new SendGridMessage();
             myMessage2.AddTo("anna@example.com");
@@ -91,7 +106,7 @@ namespace EWDTApp
 
             using (var attachmentFileStream = new FileStream(@"C:\file.txt", FileMode.Open))
             {
-                myMessage.AddAttachment(attachmentFileStream, "My Cool File.txt");
+                myMessage3.AddAttachment(attachmentFileStream, "My Cool File.txt");
             }
 
             /* How to: Use apps to enable footers, tracking, and analytics
@@ -124,7 +139,7 @@ namespace EWDTApp
 
             // true indicates that links in plain text portions of the email 
             // should also be overwritten for link tracking purposes. 
-            myMessage.EnableClickTracking(true);
+            myMessage5.EnableClickTracking(true);
         }
     }
 }
