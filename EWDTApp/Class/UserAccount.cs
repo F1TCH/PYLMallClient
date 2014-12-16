@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Web;
 
-namespace EWDTApp
+namespace EWDTApp.Class
 {
     public class UserAccount
     {

@@ -10,6 +10,8 @@ using EWDTWebServiceApp.Models;
 using System.Net;
 using System.Net.Mail;
 using SendGrid;
+using EWDTApp.Class;
+
 
 namespace EWDTApp
 {
@@ -25,55 +27,34 @@ namespace EWDTApp
             string i_username = tbxUsername.Text;
             string i_password = tbxPassword.Text;
 
-            if (i_username.Equals("Admin"))
+            if (RentDBManager.Login(i_username, i_password) == true)
             {
-                Session["username"] = "Admin";
+                Session["username"] = i_username;
                 Response.Redirect("Home.aspx");
-            }
-
-            HttpClient client = new HttpClient();
-
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = client.GetAsync("api/user/" + tbxUsername.Text).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                // Parse the response body. Blocking! 
-                var m = response.Content.ReadAsAsync<UserAccount>().Result;
-                Session["username"] = tbxUsername.Text;
-                Response.Redirect("Home.aspx");
-                // password for login
             }
             else
             {
-                Response.Write("Could not retrieve account. Error code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString());
+                lblStatus.Text = "Login Failed";
             }
-
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
+            string username = tbxSignUpUser.Text;
+            string password = tbxSignUpPass.Text;
+            string email = tbxSignUpEmail.Text;
+            UserAccount u = new UserAccount();
+            u.username = username;
+            u.password = password;
+            u.email = email;
 
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            var m = new UserAccount() { username = tbxSignUpUser.Text, password = tbxSignUpPass.Text, email = tbxSignUpEmail.Text };
-
-            HttpResponseMessage response = client.PostAsJsonAsync("api/user", m).Result;
-            if (response.IsSuccessStatusCode)
+            if (RentDBManager.Register(u) == 1)
             {
-                //Uri gizmoUri = response.Headers.Location;
                 Response.Redirect("Home.aspx");
             }
             else
             {
-                lblStatus.Text = "Could not create music. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
+                lblStatus.Text = "Registration Failed";
             }
         }
     }

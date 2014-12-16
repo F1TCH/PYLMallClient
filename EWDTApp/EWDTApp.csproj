@@ -188,6 +188,7 @@
     <Compile Include="Class\BidClass.cs" />
     <Compile Include="Class\FloorPlanClass.cs" />
     <Compile Include="Class\RentDBManager.cs" />
+    <Compile Include="Class\UserAccount.cs" />
     <Compile Include="Class\UserClass.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="EWDTMain.Master.cs">
@@ -280,7 +281,6 @@
     <Compile Include="DeleteProfilePage.aspx.designer.cs">
       <DependentUpon>DeleteProfilePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Class\UserAccount.cs" />
     <Compile Include="CreateBid.aspx.cs">
       <DependentUpon>CreateBid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

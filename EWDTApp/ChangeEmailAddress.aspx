@@ -19,12 +19,12 @@
                 <tr>
                     <td>New Email Address: </td>
                     <td>
-                        <asp:TextBox ID="tbxEmail" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="tbxEmail" runat="server" ForeColor="Black"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Retype Email Address: </td>
                     <td>
-                        <asp:TextBox ID="tbxRetypeEmailAddress" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbxRetypeEmailAddress" runat="server" ForeColor="Black"></asp:TextBox>
 
                     </td>
                 </tr>
@@ -35,7 +35,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <asp:Label ID="lblStatus" runat="server"></asp:Label>
+                    </td>
                     <td>
                         <asp:Button ID="btnBack" runat="server" Text="Back" ForeColor="Black" OnClick="btnBack_Click" />
                     </td>

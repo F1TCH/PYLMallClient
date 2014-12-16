@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EWDTApp.Class;
+using EWDTWebServiceApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -41,20 +43,20 @@ namespace EWDTApp
 
         protected void btnChange_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
+            string email = tbxEmail.Text;
+            string username = Session["username"].ToString();
 
-            client.BaseAddress = new Uri("http://localhost:" + "/");
+            UserAccount u1 = new UserAccount();
+            u1.email = email;
+            u1.username = username;
 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            var email = new UserAccount() {email= tbxEmail.Text };
-
-            HttpResponseMessage response = client.PutAsJsonAsync("api/user/" + tbxEmail.Text, email).Result;
-
-            if (response.IsSuccessStatusCode)
+            if (RentDBManager.UpdateEmail(u1) == 1)
             {
-                //lblEmail.Text
+                Response.Redirect(Request.RawUrl);
+            }
+            else
+            {
+                lblStatus.Text = "Change Failed";
             }
         }
     }

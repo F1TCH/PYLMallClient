@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EWDTApp.Class;
+using EWDTWebServiceApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -13,7 +15,9 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UserAccount u1 = new UserAccount();
+            u1.username = Session["username"].ToString();
+            tbxPassword.Text = RentDBManager.GetPassword(u1);
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
@@ -23,21 +27,7 @@ namespace EWDTApp
 
         protected void btnChange_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-
-            client.BaseAddress = new Uri("http://localhost:" + "/");
-
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            var password = new UserAccount() { password = tbxPassword.Text };
-
-            HttpResponseMessage response = client.PutAsJsonAsync("api/user/" + tbxPassword.Text, password).Result;
-
-            if (response.IsSuccessStatusCode)
-            {
-                //lblEmail.Text
-            }
+            string password = tbxPassword.Text;
         }
     }
 }
