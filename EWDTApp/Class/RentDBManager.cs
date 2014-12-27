@@ -83,7 +83,6 @@ namespace EWDTWebServiceApp.Models
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
                 comm.CommandText = "UPDATE UserAccount SET email=@email where username = @username";
-
                 comm.Parameters.AddWithValue("@email", u.email);
                 comm.Parameters.AddWithValue("@username", u.username);
                 rowsinserted = comm.ExecuteNonQuery();
@@ -109,7 +108,6 @@ namespace EWDTWebServiceApp.Models
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
                 comm.CommandText = "UPDATE UserAccount SET password=@password where username = @username";
-
                 comm.Parameters.AddWithValue("@password", u.password);
                 comm.Parameters.AddWithValue("@username", u.username);
                 rowsinserted = comm.ExecuteNonQuery();

@@ -28,6 +28,20 @@ namespace EWDTApp
         protected void btnChange_Click(object sender, EventArgs e)
         {
             string password = tbxPassword.Text;
+            string username = Session["username"].ToString();
+
+            UserAccount u1 = new UserAccount();
+            u1.password = password;
+            u1.username = username;
+
+            if (RentDBManager.UpdatePassword(u1) == 1)
+            {
+                Response.Redirect(Request.RawUrl);
+            }
+            else
+            {
+                Response.Redirect("Home.aspx");
+            }
         }
     }
 }

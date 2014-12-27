@@ -59,7 +59,7 @@
                 <tr>
                     <td>
                         <asp:Button ID="btnChangeEmail" runat="server" Text="Change Email Address" ForeColor="Black" OnClick="btnChangeEmail_Click"/>
-                        <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" ForeColor="Black" />
+                        <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" ForeColor="Black" OnClick="btnChangePassword_Click" />
                     </td>
                     <td>
                     <asp:Button ID="btnUpdateProfile" runat="server" Text="Update Profile" ForeColor="Black" OnClick="btnUpdateProfile_Click" />

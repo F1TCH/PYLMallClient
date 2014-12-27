@@ -59,5 +59,10 @@ namespace EWDTApp
         {
             Response.Redirect("ChangeEmailAddress.aspx");
         }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangePassword.aspx");
+        }
     }
 }
