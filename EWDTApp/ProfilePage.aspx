@@ -45,12 +45,6 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>Address: </td>
-                    <td>
-                        <asp:Label ID="lblAddress" runat="server"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
                     <td></td>
                     <td>
                     <asp:Button ID="btnCreateProfile" runat="server" Text="Create Profile" ForeColor="Black" OnClick="btnCreateProfile_Click" />

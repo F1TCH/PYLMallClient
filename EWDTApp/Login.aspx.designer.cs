@@ -112,13 +112,22 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.TextBox tbxSignUpEmail;
         
         /// <summary>
-        /// tbxAddress control.
+        /// tbxDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxAddress;
+        protected global::System.Web.UI.WebControls.TextBox tbxDOB;
+        
+        /// <summary>
+        /// tbxDOB_CalendarExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender tbxDOB_CalendarExtender;
         
         /// <summary>
         /// DropDownList2 control.
@@ -137,24 +146,6 @@ namespace EWDTApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxSignUpTeleNo;
-        
-        /// <summary>
-        /// tbxDOB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxDOB;
-        
-        /// <summary>
-        /// tbxDOB_CalendarExtender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.CalendarExtender tbxDOB_CalendarExtender;
         
         /// <summary>
         /// tbxSQAnswer2 control.

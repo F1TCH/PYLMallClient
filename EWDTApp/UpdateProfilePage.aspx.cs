@@ -1,4 +1,4 @@
-﻿using EWDTWebServiceApp.Models;
+﻿using EWDTApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,24 +24,20 @@ namespace EWDTApp
 
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
+            string tele = tbxTeleNum.Text;
+            string hp = tbxHandPhoneNum.Text;
 
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            UserClass u1 = new UserClass();
+            u1.HandphoneNo = Convert.ToInt32(hp);
+            u1.TelephoneNo = Convert.ToInt32(tele);
 
-            var userprofile = new UserClass() { NRIC = tbxNRIC.Text, Address = tbxAddress.Text, Email = tbxEmail.Text, Gender = ddlGender.Text, HandphoneNo = Convert.ToInt32(tbxHandPhoneNum.Text), TelephoneNo = Convert.ToInt32(tbxTeleNum.Text) };
-
-            HttpResponseMessage response = client.PutAsJsonAsync("api/userclass/" + tbxNRIC.Text, userprofile).Result;
-
-            if (response.IsSuccessStatusCode)
+            if (RentDBManager.UpdateProfile(u1) == 1)
             {
-                //Uri gizmoUri = response.Headers.Location;
-                Response.Redirect("ViewBids.aspx");
+                Response.Redirect("ProfilePage.aspx");
             }
             else
             {
+                lblStatus.Text = "Update Failed";
             }
         }
 

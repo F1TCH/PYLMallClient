@@ -1,5 +1,5 @@
 ﻿using EWDTApp.Class;
-using EWDTWebServiceApp.Models;
+using EWDTApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,31 +17,34 @@ namespace EWDTApp
         {
             UserAccount u1 = new UserAccount();
             u1.username = Session["username"].ToString();
-            tbxPassword.Text = RentDBManager.GetPassword(u1);
+            Session["currentPwd"] = RentDBManager.GetPassword(u1);
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnChange_Click(object sender, EventArgs e)
         {
-            string password = tbxPassword.Text;
+            string password = tbxRetypePw.Text;
             string username = Session["username"].ToString();
 
             UserAccount u1 = new UserAccount();
             u1.password = password;
             u1.username = username;
+            if (tbxCurrentPw.Text == (string)Session["currentPwd"].ToString())
+            {
+                if (RentDBManager.UpdatePassword(u1) == 1)
+                {
+                    Response.Redirect(Request.RawUrl);
+                }
+                else
+                {
+                    Response.Redirect("Home.aspx");
+                }
+            }
 
-            if (RentDBManager.UpdatePassword(u1) == 1)
-            {
-                Response.Redirect(Request.RawUrl);
-            }
-            else
-            {
-                Response.Redirect("Home.aspx");
-            }
         }
     }
 }

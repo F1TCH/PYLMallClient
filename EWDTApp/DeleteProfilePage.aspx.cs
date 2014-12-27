@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EWDTApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -19,22 +20,13 @@ namespace EWDTApp
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             string nric = Session["NRIC"].ToString();
-
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost:" + Session["portnumber"] + "/");
-            //Add an Accept header for JSON format
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = client.DeleteAsync("api/UserProfile/" + nric).Result;
-
-            if (response.IsSuccessStatusCode)
+            if (RentDBManager.DeleteProfile(((string)Session["username"].ToString())) == 1)
             {
-                //parse the response body. Blocking!
-                //lblStatus.Text = "Music Deleted";
+                Response.Redirect("ProfilePage.aspx");
             }
             else
             {
-                //lblStatus.Text = "Could not delete music. Error Code:" + response.StatusCode + "reason:" + response.ReasonPhrase.ToString();
+
             }
         }
 

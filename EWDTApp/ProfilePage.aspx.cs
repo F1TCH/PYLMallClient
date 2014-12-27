@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using EWDTApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -13,7 +15,16 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if profile doesnt have any data, we can redirect to createprofile. make sure they dont come to this page
+            //string username = (string)Session["username"].ToString();
+            //UserClass us = RentDBManager.GetProfile(username);
+
+            //lblUsername.Text = username;
+            //lblNRIC.Text = us.NRIC;
+            //lblEmail.Text = RentDBManager.GetEmail(username);
+            //lblTeleNum.Text = us.TelephoneNo.ToString();
+            //lblHandPhoneNum.Text = us.HandphoneNo.ToString();
+            //lblGender.Text = us.Gender;
+
         }
 
         protected void btnCreateProfile_Click(object sender, EventArgs e)
@@ -35,24 +46,9 @@ namespace EWDTApp
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = client.DeleteAsync("api/useraccount/" + Session["username"].ToString()).Result;
-            if (response.IsSuccessStatusCode)
-            {
-                //Uri gizmoUri = response.Headers.Location;
-                Session.Abandon();
-                Response.Redirect("Home.aspx");
-            }
-            else
-            {
-                lblStatus.Text = "Could not delete music. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString();
-            }
+            string username = (string)Session["username"].ToString();
+            RentDBManager.DeleteAccount(username);
+            Response.Redirect("Login.aspx");
         }
 
         protected void btnChangeEmail_Click(object sender, EventArgs e)

@@ -1,5 +1,5 @@
 ﻿using EWDTApp.Class;
-using EWDTWebServiceApp.Models;
+using EWDTApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

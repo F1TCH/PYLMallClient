@@ -106,9 +106,14 @@
                 <td>
                     <asp:TextBox ID="tbxSignUpEmail" runat="server" CssClass="form-control"></asp:TextBox></td>
                 <td class="auto-style2"></td>
-                <td class="auto-style6">Address: </td>
+                <td class="auto-style6">Date Of Birth</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tbxAddress" runat="server" CssClass="form-control" Width="150px"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control" Width="150px"></asp:TextBox>
+
+                    <ajaxToolkit:CalendarExtender ID="tbxDOB_CalendarExtender" runat="server" TargetControlID="tbxDOB">
+                    </ajaxToolkit:CalendarExtender>
+
+                </td>
                 <td></td>
                 <td class="auto-style4">Secret Question 2: </td>
                 <td>
@@ -121,14 +126,9 @@
                 <td>
                     <asp:TextBox ID="tbxSignUpTeleNo" runat="server" CssClass="form-control"></asp:TextBox></td>
                 <td class="auto-style2"></td>
-                <td class="auto-style6">Date Of Birth</td>
+                <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control" Width="150px"></asp:TextBox>
-
-                    <ajaxToolkit:CalendarExtender ID="tbxDOB_CalendarExtender" runat="server" TargetControlID="tbxDOB">
-                    </ajaxToolkit:CalendarExtender>
-
-                </td>
+                    &nbsp;</td>
                 <td></td>
                 <td class="auto-style4">Answer: </td>
                 <td><asp:TextBox ID="tbxSQAnswer2" runat="server" CssClass="form-control" Width="272px"></asp:TextBox></td>

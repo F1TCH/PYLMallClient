@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using EWDTWebServiceApp.Models;
+using EWDTApp.Models;
 using System.Net;
 using System.Net.Mail;
 using SendGrid;
@@ -50,7 +50,23 @@ namespace EWDTApp
 
             if (RentDBManager.Register(u) == 1)
             {
-                Response.Redirect("Home.aspx");
+
+
+                UserClass u1 = new UserClass();
+                u1.TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text);
+                u1.HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text);
+                u1.NRIC = tbxNric.Text;
+                u1.Gender = ddlGender.Text;
+                u1.DoB = tbxDOB.Text;
+                u1.SQ1 = DropDownList1.Text;
+                u1.SQAns1 = tbxSQAnswer1.Text;
+                u1.SQ2 = DropDownList2.Text;
+                u1.SQAns2 = tbxSQAnswer2.Text;
+
+                if (RentDBManager.RegisterProfile(u1) == 1)
+                {
+                    Response.Redirect("Home.aspx");
+                }
             }
             else
             {

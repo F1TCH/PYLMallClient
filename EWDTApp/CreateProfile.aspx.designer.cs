@@ -13,15 +13,6 @@ namespace EWDTApp {
     public partial class WebForm5 {
         
         /// <summary>
-        /// tbxUsername control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxUsername;
-        
-        /// <summary>
         /// tbxNRIC control.
         /// </summary>
         /// <remarks>
@@ -29,15 +20,6 @@ namespace EWDTApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxNRIC;
-        
-        /// <summary>
-        /// tbxEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxEmail;
         
         /// <summary>
         /// tbxTeleNum control.
@@ -67,13 +49,13 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.DropDownList ddlGender;
         
         /// <summary>
-        /// tbxAddress control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxAddress;
+        protected global::System.Web.UI.WebControls.Label lblStatus;
         
         /// <summary>
         /// btnCreateProfile control.

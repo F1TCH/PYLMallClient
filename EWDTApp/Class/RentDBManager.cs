@@ -5,14 +5,15 @@ using System.Web;
 using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
-using EWDTWebServiceApp.Models;
+using EWDTApp.Models;
 using EWDTApp;
 using EWDTApp.Class;
 
-namespace EWDTWebServiceApp.Models
+namespace EWDTApp.Models
 {
     public class RentDBManager
     {
+        //Login CRUD//
         public static bool Login(string input_username, string input_password)
         {
             bool successful = false;
@@ -146,6 +147,173 @@ namespace EWDTWebServiceApp.Models
             return "";
         }
 
+        public static string GetEmail(string username)
+        {
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT email FROM UserAccount where username = @username";
+                comm.Parameters.AddWithValue("@username", username);
+                SqlDataReader dr = comm.ExecuteReader();
+                if (dr.Read())
+                {
+                    return dr.GetString(0);
+                }
+                dr.Close();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return "";
+        }
+
+        public static int DeleteAccount(string username)
+        {
+            int rowsdeleted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "DELETE FROM UserAccount where username=@username";
+                comm.Parameters.AddWithValue("@username", username);
+                rowsdeleted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsdeleted;
+        }
+        //END//
+
+
+        public static int RegisterProfile(UserClass u)
+        {
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "INSERT INTO UserProfile(nric, Telno, Handphno, gender, DoB, SQ1, SQ2, SQAns1, SQAns2, username)" +
+                    " VALUES (@nric, @Telno, @Handphno, @gender, @DoB, @SQ1, @SQ2, @SQAns1, @SQAns2, @username)";
+                comm.Parameters.AddWithValue("@nric", u.NRIC);
+                comm.Parameters.AddWithValue("@Telno", u.TelephoneNo);
+                comm.Parameters.AddWithValue("@Handphno", u.HandphoneNo);
+                comm.Parameters.AddWithValue("@gender", u.Gender);
+                comm.Parameters.AddWithValue("@DoB", u.DoB);
+                comm.Parameters.AddWithValue("@SQ1", u.SQ1);
+                comm.Parameters.AddWithValue("@SQ2", u.SQ2);
+                comm.Parameters.AddWithValue("@SQAns1", u.SQAns1);
+                comm.Parameters.AddWithValue("@SQAns2", u.SQAns2);
+                comm.Parameters.AddWithValue("@username", u.Username);
+
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static int UpdateProfile(UserClass u)
+        {
+
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "Update UserProfile SET Telno = @Telno, Handphno = @Handphno WHERE username = @username";
+                comm.Parameters.AddWithValue("@Telno", u.TelephoneNo);
+                comm.Parameters.AddWithValue("@Handphno", u.HandphoneNo);
+                comm.Parameters.AddWithValue("@username", u.Username);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static UserClass GetProfile(string username)
+        {
+            UserClass b = new UserClass();
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * FROM UserClass where username = @username";
+                comm.Parameters.AddWithValue("@username", username);
+                SqlDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    b.NRIC = (string)dr["nric"];
+                    b.TelephoneNo = (int)dr["Telno"];
+                    b.HandphoneNo = (int)dr["Handphno"];
+                    b.Gender = (string)dr["Time"];
+                }
+
+                dr.Close();
+                conn.Close(); 
+                return b;
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+        }
+
+        public static int DeleteProfile(string username)
+        {
+            int rowsdeleted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "DELETE FROM UserAccount where username=@username";
+                comm.Parameters.AddWithValue("@username", username);
+                rowsdeleted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsdeleted;
+        }
         //public static int CreateBid(BidClass c)
         //{
         //    int rowsinserted = 0;

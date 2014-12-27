@@ -12,21 +12,6 @@
             <br />
             <table style="width: 100%;">
                 <tr>
-                    <td>Username: </td>
-                    <td>
-                        <asp:TextBox ID="tbxUsername" runat="server"></asp:TextBox></td>
-                </tr>
-                <tr>
-                    <td>NRIC: </td>
-                    <td>
-                        <asp:TextBox ID="tbxNRIC" runat="server"></asp:TextBox></td>
-                </tr>
-                <tr>
-                    <td>Email: </td>
-                    <td>
-                        <asp:TextBox ID="tbxEmail" runat="server"></asp:TextBox></td>
-                </tr>
-                <tr>
                     <td>Telephone Number</td>
                     <td>
                         <asp:TextBox ID="tbxTeleNum" runat="server"></asp:TextBox></td>
@@ -37,22 +22,7 @@
                         <asp:TextBox ID="tbxHandPhoneNum" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td>Gender:</td>
-                    <td>
-                        <asp:DropDownList ID="ddlGender" runat="server" ForeColor="Black">
-                            <asp:ListItem>Male</asp:ListItem>
-                            <asp:ListItem>Female</asp:ListItem>
-                        </asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Address: </td>
-                    <td>
-                        <asp:TextBox ID="tbxAddress" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
+                    <td><asp:Label ID="lblStatus" runat ="server" Text=""></asp:Label></td>
                     <td>
                         <asp:Button ID="btnUpdateProfile" runat="server" Text="Update now!" ForeColor="Black" OnClick="btnUpdateProfile_Click" />
                     </td>
