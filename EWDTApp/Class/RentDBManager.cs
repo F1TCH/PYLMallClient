@@ -373,6 +373,59 @@ namespace EWDTApp.Models
             return rowsinserted;
         }
 
+        public static int UpdateFloorPlan(FloorPlanClass u)
+        {
+
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "UPDATE FloorPlan SET Unit=@Unit,UnitLevel=@UnitLevel,Name=@Name,Price=@Price,Condition=@Condition,Imagefile=@Imagefile";
+
+                comm.Parameters.AddWithValue("@Unit", u.Unit);
+                comm.Parameters.AddWithValue("@UnitLevel", u.UnitLevel);
+                comm.Parameters.AddWithValue("@Name", u.Name);
+                comm.Parameters.AddWithValue("@Price", u.Price);
+                comm.Parameters.AddWithValue("@Condition", u.Condition);
+                comm.Parameters.AddWithValue("@Imagefile", u.Imagefile);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static int DeleteFloorPlan(string d)
+        {
+            int rowsdeleted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "DELETE * FROM Floorplan where Unit=@Unit";
+                comm.Parameters.AddWithValue("@Unit", d);
+                rowsdeleted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsdeleted;
+        }
+
         //public static int CreateBid(BidClass c)
         //{
         //    int rowsinserted = 0;
