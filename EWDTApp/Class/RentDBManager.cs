@@ -314,6 +314,65 @@ namespace EWDTApp.Models
             }
             return rowsdeleted;
         }
+
+        public static int CreateFloorPlan(FloorPlanClass c)
+        {
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "INSERT INTO FloorPlan(Unit,UnitLevel,Name,Price,Condition,Imagefile)" +
+                    " VALUES (@Unit,@UnitLevel,@Name,@Price,@Condition,@Imagefile)";
+                comm.Parameters.AddWithValue("@Unit", c.Unit);
+                comm.Parameters.AddWithValue("@UnitLevel", c.UnitLevel);
+                comm.Parameters.AddWithValue("@Name", c.Name);
+                comm.Parameters.AddWithValue("@Price", c.Price);
+                comm.Parameters.AddWithValue("@Condition", c.Condition);
+                comm.Parameters.AddWithValue("@Imagefile", c.Imagefile);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static int RetrieveFloorPlan(FloorPlanClass r)
+        {
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * FROM FloorPlan";
+
+                comm.Parameters.AddWithValue("@Unit", r.Unit);
+                comm.Parameters.AddWithValue("@UnitLevel", r.UnitLevel);
+                comm.Parameters.AddWithValue("@Name", r.Name);
+                comm.Parameters.AddWithValue("@Price", r.Price);
+                comm.Parameters.AddWithValue("@Condition", r.Condition);
+                comm.Parameters.AddWithValue("@Imagefile", r.Imagefile);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
         //public static int CreateBid(BidClass c)
         //{
         //    int rowsinserted = 0;
