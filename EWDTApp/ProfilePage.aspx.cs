@@ -15,15 +15,15 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string username = (string)Session["username"].ToString();
-            //UserClass us = RentDBManager.GetProfile(username);
+            string username = (string)Session["username"].ToString();
+            UserClass us = RentDBManager.GetProfile(username);
 
-            //lblUsername.Text = username;
-            //lblNRIC.Text = us.NRIC;
-            //lblEmail.Text = RentDBManager.GetEmail(username);
-            //lblTeleNum.Text = us.TelephoneNo.ToString();
-            //lblHandPhoneNum.Text = us.HandphoneNo.ToString();
-            //lblGender.Text = us.Gender;
+            lblUsername.Text = username;
+            lblNRIC.Text = us.NRIC;
+            lblEmail.Text = RentDBManager.GetEmail(username);
+            lblTeleNum.Text = us.TelephoneNo.ToString();
+            lblHandPhoneNum.Text = us.HandphoneNo.ToString();
+            lblGender.Text = us.Gender;
 
         }
 

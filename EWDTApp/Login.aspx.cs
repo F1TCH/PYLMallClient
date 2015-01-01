@@ -50,8 +50,6 @@ namespace EWDTApp
 
             if (RentDBManager.Register(u) == 1)
             {
-
-
                 UserClass u1 = new UserClass();
                 u1.TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text);
                 u1.HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text);
@@ -62,6 +60,7 @@ namespace EWDTApp
                 u1.SQAns1 = tbxSQAnswer1.Text;
                 u1.SQ2 = DropDownList2.Text;
                 u1.SQAns2 = tbxSQAnswer2.Text;
+                u1.Username = username;
 
                 if (RentDBManager.RegisterProfile(u1) == 1)
                 {
