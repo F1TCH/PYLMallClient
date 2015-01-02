@@ -270,7 +270,7 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * FROM UserClass where username = @username";
+                comm.CommandText = "SELECT * FROM [UserProfile] where username = @username";
                 comm.Parameters.AddWithValue("@username", username);
                 SqlDataReader dr = comm.ExecuteReader();
                 while (dr.Read())
@@ -279,11 +279,11 @@ namespace EWDTApp.Models
                     b.NRIC = (string)dr["nric"];
                     b.TelephoneNo = (int)dr["Telno"];
                     b.HandphoneNo = (int)dr["Handphno"];
-                    b.Gender = (string)dr["Time"];
+                    b.Gender = (string)dr["gender"];
                 }
 
                 dr.Close();
-                conn.Close(); 
+                conn.Close();
                 return b;
             }
             catch (SqlException e)
@@ -304,7 +304,7 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "DELETE FROM UserAccount where username=@username";
+                comm.CommandText = "DELETE FROM UserProfile where username=@username";
                 comm.Parameters.AddWithValue("@username", username);
                 rowsdeleted = comm.ExecuteNonQuery();
             }
@@ -344,10 +344,9 @@ namespace EWDTApp.Models
             return rowsinserted;
         }
 
-        public static int RetrieveFloorPlan(FloorPlanClass r)
+        public static FloorPlanClass RetrieveFloorPlan(FloorPlanClass r)
         {
-            int rowsinserted = 0;
-
+            FloorPlanClass b = new FloorPlanClass();
             SqlConnection conn = null;
             try
             {
@@ -356,21 +355,28 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * FROM FloorPlan";
-
+                comm.CommandText = "SELECT * FROM FloorPlan WHERE Unit = @unit";
                 comm.Parameters.AddWithValue("@Unit", r.Unit);
-                comm.Parameters.AddWithValue("@UnitLevel", r.UnitLevel);
-                comm.Parameters.AddWithValue("@Name", r.Name);
-                comm.Parameters.AddWithValue("@Price", r.Price);
-                comm.Parameters.AddWithValue("@Condition", r.Condition);
-                comm.Parameters.AddWithValue("@Imagefile", r.Imagefile);
-                rowsinserted = comm.ExecuteNonQuery();
+                SqlDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    b.Unit = (string)dr["Unit"];
+                    b.UnitLevel = (int)dr["UnitLevel"];
+                    b.Name = (string)dr["Name"];
+                    b.Price = (double)dr["Price"];
+                    b.Condition = (string)dr["Condition"];
+                    b.Imagefile = (string)dr["Imagefile"];
+                }
+
+                dr.Close();
+                conn.Close();
+                return b;
             }
             catch (SqlException e)
             {
                 throw e;
             }
-            return rowsinserted;
         }
 
         public static int UpdateFloorPlan(FloorPlanClass u)

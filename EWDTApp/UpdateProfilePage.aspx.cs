@@ -30,6 +30,7 @@ namespace EWDTApp
             UserClass u1 = new UserClass();
             u1.HandphoneNo = Convert.ToInt32(hp);
             u1.TelephoneNo = Convert.ToInt32(tele);
+            u1.Username = Session["Username"].ToString();
 
             if (RentDBManager.UpdateProfile(u1) == 1)
             {

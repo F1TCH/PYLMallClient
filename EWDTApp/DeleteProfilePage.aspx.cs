@@ -19,8 +19,8 @@ namespace EWDTApp
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            string nric = Session["NRIC"].ToString();
-            if (RentDBManager.DeleteProfile(((string)Session["username"].ToString())) == 1)
+            string username = Session["username"].ToString();
+            if (RentDBManager.DeleteProfile(username) == 1)
             {
                 Response.Redirect("ProfilePage.aspx");
             }

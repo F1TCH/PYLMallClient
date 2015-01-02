@@ -14,12 +14,12 @@
                 <tr>
                     <td>Telephone Number</td>
                     <td>
-                        <asp:TextBox ID="tbxTeleNum" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="tbxTeleNum" runat="server" ForeColor="Black"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Handphone Number: </td>
                     <td>
-                        <asp:TextBox ID="tbxHandPhoneNum" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="tbxHandPhoneNum" runat="server" ForeColor="Black"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td><asp:Label ID="lblStatus" runat ="server" Text=""></asp:Label></td>

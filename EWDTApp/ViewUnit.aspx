@@ -52,7 +52,7 @@
                 <asp:ListItem Text="01-09"></asp:ListItem>
                 <asp:ListItem Text="01-10"></asp:ListItem>
             </asp:DropDownList>
-            <asp:Button ID="btnView" runat="server" Text="View" Height="24px" Width="66px" ForeColor="Black" Font-Bold="True" Font-Size="15px"/><br />
+            <asp:Button ID="btnView" runat="server" Text="View" Height="24px" Width="66px" ForeColor="Black" Font-Bold="True" Font-Size="15px" OnClick="btnView_Click"/><br />
             <table style="width:100%;">
                 <tr>
                     <td class="auto-style2">Price (Minimum bid):</td>

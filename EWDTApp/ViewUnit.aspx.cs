@@ -19,5 +19,12 @@ namespace EWDTApp
         {
             Response.Redirect("ViewBid.aspx?");
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            FloorPlanClass r = new FloorPlanClass();
+            r.Unit = ddlUnit.Text;
+            RentDBManager.RetrieveFloorPlan(r);
+        }
     }
 }
