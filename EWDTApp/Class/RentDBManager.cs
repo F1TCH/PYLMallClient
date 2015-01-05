@@ -426,6 +426,108 @@ namespace EWDTApp.Models
             return rowsdeleted;
         }
 
+        public static int CreateBid(BidClass c)
+        {
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "INSERT INTO Bidding(BiddingAmt,Time,Date)" +
+                    " VALUES (@BiddingAmt,@Time,@Date)";
+                comm.Parameters.AddWithValue("@BiddingAmt", c.BiddingAmt);
+                comm.Parameters.AddWithValue("@Time", c.Time);
+                comm.Parameters.AddWithValue("@Date", c.Date);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static int RetrieveBid(BidClass r)
+        {
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "SELECT * FROM Bidding";
+
+                comm.Parameters.AddWithValue("@BiddingAmt", r.BiddingAmt);
+                comm.Parameters.AddWithValue("@Time", r.Time);
+                comm.Parameters.AddWithValue("@Date", r.Date);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static int UpdateBid(BidClass u)
+        {
+
+            int rowsinserted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "UPDATE Bidding SET BiddingAmt=@BiddingAmt,Time=@Time,Date=@Date where BiddingAmt = '4468'";
+
+                comm.Parameters.AddWithValue("@BiddingAmt", u.BiddingAmt);
+                comm.Parameters.AddWithValue("@Time", u.Time);
+                comm.Parameters.AddWithValue("@Date", u.Date);
+                rowsinserted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsinserted;
+        }
+
+        public static int DeleteBid(double biddingamt)
+        {
+            int rowsdeleted = 0;
+
+            SqlConnection conn = null;
+            try
+            {
+                conn = new SqlConnection();
+                conn.ConnectionString = ConfigurationManager.ConnectionStrings["EWDTdbConnectionString"].ConnectionString;
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                comm.Connection = conn;
+                comm.CommandText = "DELETE * FROM bidding where BiddingAmt=@BiddingAmt";
+                comm.Parameters.AddWithValue("@BiddingAmt", biddingamt);
+                rowsdeleted = comm.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            return rowsdeleted;
+        }
+
         //public static int CreateBid(BidClass c)
         //{
         //    int rowsinserted = 0;
