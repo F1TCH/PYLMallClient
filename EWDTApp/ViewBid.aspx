@@ -19,7 +19,9 @@
                 <td>Bidding Amount <asp:Label ID="lblBA" runat="server" Text=""></asp:Label></td>
                 <td>Date</td>
                 <td>Time</td>
-                <td></td>
+                <td>
+                    <asp:Button ID="Button1" runat="server" ForeColor="Black" Height="37px" OnClick="Button1_Click" Text="Create Bid" Width="149px" />
+                </td>
                 <td></td>
             </tr>
             <tr>

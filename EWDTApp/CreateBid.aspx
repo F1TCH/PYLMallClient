@@ -41,7 +41,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnBack" runat="server" Text="Back to floorplan!" ForeColor="Black" OnClick="btnBack_Click" Width="287px" />
+                        <asp:Button ID="btnBack" runat="server" Text="Back " ForeColor="Black" OnClick="btnBack_Click" Width="181px" Height="32px" />
                     </td>
                 </tr>
             </table>

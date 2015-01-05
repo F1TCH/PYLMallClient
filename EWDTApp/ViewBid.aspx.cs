@@ -68,5 +68,10 @@ namespace EWDTApp
                 Response.Write("Could not delete music. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString());
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateBid.aspx");
+        }
     }
 }
