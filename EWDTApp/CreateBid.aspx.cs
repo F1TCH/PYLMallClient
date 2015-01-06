@@ -26,24 +26,19 @@ namespace EWDTApp
 
         protected void btnCreateBid_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
+            BidClass c = new BidClass();
+            c.BiddingAmt = tbxBiddingAmount.Text;
+            c.Time = lblTime.Text;
+            c.Date = lblDate.Text;
+            c.Username = Session["username"].ToString();
 
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            var m = new BidClass() { BiddingAmt = Convert.ToDouble(tbxBiddingAmount.Text), Date = lblDate.Text, Time = lblTime.Text};
-
-            HttpResponseMessage response = client.PostAsJsonAsync("api/biddingclass", m).Result;
-            if (response.IsSuccessStatusCode)
+            if (RentDBManager.CreateBid(c) == 1)
             {
-                //Uri gizmoUri = response.Headers.Location;
                 Response.Redirect("ViewBid.aspx");
             }
             else
             {
-                Response.Redirect("ViewBid.aspx");
+                Response.Redirect("Home.aspx");
             }
         }
     }

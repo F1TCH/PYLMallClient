@@ -283,7 +283,7 @@ namespace EWDTApp.Models
                 }
 
                 dr.Close();
-                conn.Close(); 
+                conn.Close();
                 return b;
             }
             catch (SqlException e)
@@ -438,11 +438,12 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "INSERT INTO Bidding(BiddingAmt,Time,Date)" +
-                    " VALUES (@BiddingAmt,@Time,@Date)";
+                comm.CommandText = "INSERT INTO Bidding(BiddingAmt,Time,Date,username)" +
+                    " VALUES (@BiddingAmt,@Time,@Date,@username)";
                 comm.Parameters.AddWithValue("@BiddingAmt", c.BiddingAmt);
                 comm.Parameters.AddWithValue("@Time", c.Time);
                 comm.Parameters.AddWithValue("@Date", c.Date);
+                comm.Parameters.AddWithValue("@username", c.Username);
                 rowsinserted = comm.ExecuteNonQuery();
             }
             catch (SqlException e)
@@ -452,9 +453,9 @@ namespace EWDTApp.Models
             return rowsinserted;
         }
 
-        public static int RetrieveBid(BidClass r)
+        public static BidClass RetrieveBid(string username)
         {
-            int rowsinserted = 0;
+            BidClass s = new BidClass();
 
             SqlConnection conn = null;
             try
@@ -464,18 +465,25 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * FROM Bidding";
+                comm.CommandText = "SELECT * FROM Bidding WHERE username = @username";
 
-                comm.Parameters.AddWithValue("@BiddingAmt", r.BiddingAmt);
-                comm.Parameters.AddWithValue("@Time", r.Time);
-                comm.Parameters.AddWithValue("@Date", r.Date);
-                rowsinserted = comm.ExecuteNonQuery();
+                comm.Parameters.AddWithValue("@username", username);
+                SqlDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+                    s.BiddingAmt = (string)dr["BiddingAmt"];
+                    s.Date = (string)dr["Date"].ToString();
+                    s.Time = (string)dr["Time"];
+                }
+
+                dr.Close();
+                conn.Close();
+                return s;
             }
             catch (SqlException e)
             {
                 throw e;
             }
-            return rowsinserted;
         }
 
         public static int UpdateBid(BidClass u)
@@ -491,11 +499,13 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "UPDATE Bidding SET BiddingAmt=@BiddingAmt,Time=@Time,Date=@Date where BiddingAmt = '4468'";
+                comm.CommandText = "UPDATE Bidding SET BiddingAmt=@BiddingAmt,Time=@Time,Date=@Date where username = @Username";
 
                 comm.Parameters.AddWithValue("@BiddingAmt", u.BiddingAmt);
                 comm.Parameters.AddWithValue("@Time", u.Time);
                 comm.Parameters.AddWithValue("@Date", u.Date);
+                comm.Parameters.AddWithValue("@Username", u.Username);
+                
                 rowsinserted = comm.ExecuteNonQuery();
             }
             catch (SqlException e)
@@ -505,7 +515,7 @@ namespace EWDTApp.Models
             return rowsinserted;
         }
 
-        public static int DeleteBid(double biddingamt)
+        public static int DeleteBid(string username)
         {
             int rowsdeleted = 0;
 
@@ -517,8 +527,8 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "DELETE * FROM bidding where BiddingAmt=@BiddingAmt";
-                comm.Parameters.AddWithValue("@BiddingAmt", biddingamt);
+                comm.CommandText = "DELETE FROM bidding where username=@Username";
+                comm.Parameters.AddWithValue("@Username", username);
                 rowsdeleted = comm.ExecuteNonQuery();
             }
             catch (SqlException e)

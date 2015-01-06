@@ -15,12 +15,12 @@
                 <tr>
                     <td>Username: </td>
                     <td>
-                        <asp:Label ID="lblUsername" runat="server"></asp:Label></td>
+                        <asp:Label ID="lblUsername" runat="server" ForeColor="Black"></asp:Label></td>
                 </tr>
                 <tr>
                     <td>Bidding amount: </td>
                     <td>
-                        <asp:TextBox ID="tbxBiddingAmount" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="tbxBiddingAmount" runat="server" ForeColor="Black"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Date:</td>

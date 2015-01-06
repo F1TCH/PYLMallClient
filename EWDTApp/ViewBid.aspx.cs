@@ -14,30 +14,15 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = client.GetAsync("api/bidding").Result;
-
-            if (response.IsSuccessStatusCode)
+            string username = Session["username"].ToString();
+            BidClass c = RentDBManager.RetrieveBid(username);
+            if (c != null)
             {
-                // Parse the response body. Blocking! 
-                var BidClass = response.Content.ReadAsAsync<IEnumerable<BidClass>>().Result;
-                foreach (var m in BidClass)
-                {
-                    lblBA.Text = m.BiddingAmt.ToString();
-                }
-            }
-            else
-            {
-                
+                lblBiddingAmount.Text = c.BiddingAmt;
+                lblDate.Text = c.Date;
+                lblTime.Text = c.Time;
             }
         }
-
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
             //BidClass editBid = new BidClass();
@@ -51,21 +36,14 @@ namespace EWDTApp
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-
-            client.BaseAddress = new Uri("http://localhost:" + Session["portNumber"] + "/");
-            // Add an Accept header for JSON format. 
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = client.DeleteAsync("api/bidclass/" + lblBA.Text).Result;
-            if (response.IsSuccessStatusCode)
+            string username = Session["username"].ToString();
+            if (RentDBManager.DeleteBid(username) == 1)
             {
-                Response.Redirect("Home.aspx");
+                Response.Redirect("ViewBid.aspx");
             }
             else
             {
-                Response.Write("Could not delete music. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString());
+                Response.Redirect("ViewBid.aspx");
             }
         }
 
@@ -73,5 +51,6 @@ namespace EWDTApp
         {
             Response.Redirect("CreateBid.aspx");
         }
+
     }
 }

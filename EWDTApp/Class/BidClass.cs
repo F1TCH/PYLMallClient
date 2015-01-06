@@ -7,8 +7,9 @@ namespace EWDTApp.Models
 {
     public class BidClass
     {
-        public double BiddingAmt { get; set; }
+        public string BiddingAmt { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
+        public string Username { get; set; }
     }
 }
