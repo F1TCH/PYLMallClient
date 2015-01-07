@@ -27,14 +27,29 @@ namespace EWDTApp
             string i_username = tbxUsername.Text;
             string i_password = tbxPassword.Text;
 
-            if (RentDBManager.Login(i_username, i_password) == true)
+            UserAccount ua = new UserAccount();
+            ua.username = i_username;
+            ua.password = i_password;
+
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            string command = string.Format("http://localhost:52455/api/userAccount/username/"+i_username+"/password/"+i_password);
+            HttpResponseMessage response = client.GetAsync(command).Result;
+            
+
+            if (response.IsSuccessStatusCode)
             {
                 Session["username"] = i_username;
                 Response.Redirect("Home.aspx");
             }
+
             else
             {
-                lblStatus.Text = "Login Failed";
+                lblStatus.Text = "Could not retrieve music. Error code: " + response.StatusCode + " reason: Reyner " + response.ReasonPhrase.ToString();
             }
         }
 
