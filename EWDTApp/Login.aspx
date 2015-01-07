@@ -87,6 +87,8 @@
                 <td class="auto-style1">Password : </td>
                 <td>
                     <asp:TextBox ID="tbxSignUpPass" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                    <ajaxToolkit:PasswordStrength ID="tbxSignUpPass_PasswordStrength" runat="server" TargetControlID="tbxSignUpPass">
+                    </ajaxToolkit:PasswordStrength>
                 </td>
                 <td class="auto-style2"></td>
                 <td class="auto-style6">Gender: </td>
@@ -149,7 +151,10 @@
             <tr>
                 <td class="auto-style1">&nbsp;&nbsp;&nbsp; &nbsp; </td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" Width="81px" CssClass="btn btn-default" OnClick="btnSignUp_Click" /></td>
+                        <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" Width="81px" CssClass="btn btn-default" OnClick="btnSignUp_Click" />
+                    <ajaxToolkit:ConfirmButtonExtender ID="btnSignUp_ConfirmButtonExtender" runat="server" TargetControlID="btnSignUp" ConfirmText=" ARE YOU SURE ?">
+                    </ajaxToolkit:ConfirmButtonExtender>
+                </td>
             </tr>
             <tr>
                 <td></td>

@@ -85,6 +85,15 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.TextBox tbxSignUpPass;
         
         /// <summary>
+        /// tbxSignUpPass_PasswordStrength control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.PasswordStrength tbxSignUpPass_PasswordStrength;
+        
+        /// <summary>
         /// ddlGender control.
         /// </summary>
         /// <remarks>
@@ -173,5 +182,14 @@ namespace EWDTApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSignUp;
+        
+        /// <summary>
+        /// btnSignUp_ConfirmButtonExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ConfirmButtonExtender btnSignUp_ConfirmButtonExtender;
     }
 }

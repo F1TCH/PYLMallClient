@@ -52,5 +52,10 @@ namespace EWDTApp
             Response.Redirect("CreateBid.aspx");
         }
 
+        protected void Rating_Changed(object sender, AjaxControlToolkit.RatingEventArgs e)
+        {
+
+        }
+
     }
 }

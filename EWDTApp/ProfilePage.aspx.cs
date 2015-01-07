@@ -36,13 +36,13 @@ namespace EWDTApp
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
         {
             Session["NRIC"] = lblNRIC.Text;
-            Response.Redirect("UpdateProfilePage.aspx" + Session["NRIC"]);
+            Response.Redirect("UpdateProfilePage.aspx");
         }
 
         protected void btnDeleteProfile_Click(object sender, EventArgs e)
         {
             Session["NRIC"] = lblNRIC.Text;
-            Response.Redirect("DeleteProfilePage.aspx" + Session["NRIC"]);
+            Response.Redirect("DeleteProfilePage.aspx");
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
