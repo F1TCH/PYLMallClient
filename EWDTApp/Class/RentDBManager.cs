@@ -270,7 +270,7 @@ namespace EWDTApp.Models
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
                 comm.Connection = conn;
-                comm.CommandText = "SELECT * FROM UserClass where username = @username";
+                comm.CommandText = "SELECT * FROM UserProfile where username = @username";
                 comm.Parameters.AddWithValue("@username", username);
                 SqlDataReader dr = comm.ExecuteReader();
                 while (dr.Read())
@@ -279,7 +279,7 @@ namespace EWDTApp.Models
                     b.NRIC = (string)dr["nric"];
                     b.TelephoneNo = (int)dr["Telno"];
                     b.HandphoneNo = (int)dr["Handphno"];
-                    b.Gender = (string)dr["Time"];
+                    b.Gender = (string)dr["Gender"];
                 }
 
                 dr.Close();

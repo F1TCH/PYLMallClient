@@ -17,14 +17,15 @@ namespace EWDTApp
         {
             string username = (string)Session["username"].ToString();
             UserClass us = RentDBManager.GetProfile(username);
-
-            lblUsername.Text = username;
-            lblNRIC.Text = us.NRIC;
-            lblEmail.Text = RentDBManager.GetEmail(username);
-            lblTeleNum.Text = us.TelephoneNo.ToString();
-            lblHandPhoneNum.Text = us.HandphoneNo.ToString();
-            lblGender.Text = us.Gender;
-
+            if (us != null)
+            {
+                lblUsername.Text = username;
+                lblNRIC.Text = us.NRIC;
+                lblEmail.Text = RentDBManager.GetEmail(username);
+                lblTeleNum.Text = us.TelephoneNo.ToString();
+                lblHandPhoneNum.Text = us.HandphoneNo.ToString();
+                lblGender.Text = us.Gender;
+            }
         }
 
         protected void btnCreateProfile_Click(object sender, EventArgs e)
