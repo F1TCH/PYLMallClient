@@ -15,17 +15,33 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string username = (string)Session["username"].ToString();
-            UserClass us = RentDBManager.GetProfile(username);
-            if (us != null)
+            string i_username = Session["username"].ToString();
+
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                  new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = client.GetAsync("api/userProfile?userID=" + i_username).Result;
+
+            if (response.IsSuccessStatusCode)
             {
-                lblUsername.Text = username;
-                lblNRIC.Text = us.NRIC;
-                lblEmail.Text = RentDBManager.GetEmail(username);
-                lblTeleNum.Text = us.TelephoneNo.ToString();
-                lblHandPhoneNum.Text = us.HandphoneNo.ToString();
-                lblGender.Text = us.Gender;
+                // Parse the response body. Blocking! 
+                var result = response.Content.ReadAsAsync<UserClass>().Result;
+
+                lblNRIC.Text = result.NRIC;
+                lblEmail.Text = "pheeyx123@gmail.com";
+                lblTeleNum.Text = result.TelephoneNo.ToString();
+                lblHandPhoneNum.Text = result.HandphoneNo.ToString();
+                lblGender.Text = result.Gender;
             }
+            else
+            {
+                lblStatus.Text = "Could not retrieve User. Error code: " + response.StatusCode + " reason: Reyner/Tim " + response.ReasonPhrase.ToString();
+            }
+
         }
 
         protected void btnCreateProfile_Click(object sender, EventArgs e)
@@ -45,21 +61,34 @@ namespace EWDTApp
             Response.Redirect("DeleteProfilePage.aspx");
         }
 
+
+        //useraccount
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             string username = (string)Session["username"].ToString();
-            RentDBManager.DeleteAccount(username);
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.DeleteAsync("api/userAccount/" + username).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                //Uri gizmoUri = response.Headers.Location;
+                lblStatus.Text = "Account deleted.";
+            }
+            else
+            {
+                lblStatus.Text = "Could not delete music. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString();
+            }
             Response.Redirect("Login.aspx");
         }
 
         protected void btnChangeEmail_Click(object sender, EventArgs e)
         {
             Response.Redirect("ChangeEmailAddress.aspx");
-        }
-
-        protected void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ChangePassword.aspx");
         }
     }
 }

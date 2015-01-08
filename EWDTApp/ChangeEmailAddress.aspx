@@ -5,8 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="content_body" runat="server">
     <div class="ProfilePage">
-        <h1>Change Email Address</h1>
-        <h4>It's good that you keep your email updated!</h4>
+        <h1>Change Email Address &amp; Password</h1>
+        <h4>It's good that you keep your email and password updated!</h4>
 
         <div class="ProfileBody">
             <br />
@@ -27,6 +27,10 @@
                         <asp:TextBox ID="tbxRetypeEmailAddress" runat="server" ForeColor="Black"></asp:TextBox>
 
                     </td>
+                </tr>
+                <tr>
+                    <td>New Password: </td>
+                    <td><asp:TextBox ID="tbxPassword" runat ="server" Text ="" ForeColor ="Black"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td></td>

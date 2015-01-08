@@ -30,19 +30,41 @@ namespace EWDTApp
             string password = tbxRetypePw.Text;
             string username = Session["username"].ToString();
 
-            UserAccount u1 = new UserAccount();
-            u1.password = password;
-            u1.username = username;
-            if (tbxCurrentPw.Text == (string)Session["currentPwd"].ToString())
+            //UserAccount u1 = new UserAccount();
+            //u1.password = password;
+            //u1.username = username;
+            //if (tbxCurrentPw.Text == (string)Session["currentPwd"].ToString())
+            //{
+            //    if (RentDBManager.UpdatePassword(u1) == 1)
+            //    {
+            //        Response.Redirect(Request.RawUrl);
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("Home.aspx");
+            //    }
+            //}
+
+
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            var user = new UserAccount() { username = username, password = password };
+
+            HttpResponseMessage response = client.PutAsJsonAsync("api/userAccount/" + username, user).Result;
+
+            if (response.IsSuccessStatusCode)
             {
-                if (RentDBManager.UpdatePassword(u1) == 1)
-                {
-                    Response.Redirect(Request.RawUrl);
-                }
-                else
-                {
-                    Response.Redirect("Home.aspx");
-                }
+                //Uri gizmoUri = response.Headers.Location;
+                lblStatus.Text = "Password updated.";
+                Response.Redirect("ProfilePage.aspx");
+            }
+            else
+            {
+                lblStatus.Text = "Could not update profile. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
             }
 
         }

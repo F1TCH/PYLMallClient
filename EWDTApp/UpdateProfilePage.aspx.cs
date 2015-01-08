@@ -14,7 +14,7 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnBack_Click(object sender, EventArgs e)
@@ -24,20 +24,29 @@ namespace EWDTApp
 
         protected void btnUpdateProfile_Click(object sender, EventArgs e)
         {
-            string tele = tbxTeleNum.Text;
-            string hp = tbxHandPhoneNum.Text;
+            int tele = Convert.ToInt32(tbxTeleNum.Text);
+            int hp = Convert.ToInt32(tbxHandPhoneNum.Text);
+            string username = Session["username"].ToString();
 
-            UserClass u1 = new UserClass();
-            u1.HandphoneNo = Convert.ToInt32(hp);
-            u1.TelephoneNo = Convert.ToInt32(tele);
+            HttpClient client = new HttpClient();
 
-            if (RentDBManager.UpdateProfile(u1) == 1)
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            var user = new UserClass() { Username = username, TelephoneNo = tele, HandphoneNo = hp };
+
+            HttpResponseMessage response = client.PutAsJsonAsync("api/userProfile/" + username, user).Result;
+
+            if (response.IsSuccessStatusCode)
             {
+                //Uri gizmoUri = response.Headers.Location;
+                lblStatus.Text = "Emile updated.";
                 Response.Redirect("ProfilePage.aspx");
             }
             else
             {
-                lblStatus.Text = "Update Failed";
+                lblStatus.Text = "Could not update profile. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
             }
         }
 

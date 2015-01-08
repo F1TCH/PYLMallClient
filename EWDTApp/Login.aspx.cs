@@ -27,29 +27,30 @@ namespace EWDTApp
             string i_username = tbxUsername.Text;
             string i_password = tbxPassword.Text;
 
-            UserAccount ua = new UserAccount();
-            ua.username = i_username;
-            ua.password = i_password;
-
             HttpClient client = new HttpClient();
 
             client.BaseAddress = new Uri("http://localhost:52455/");
             // Add an Accept header for JSON format. 
             client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-            string command = string.Format("http://localhost:52455/api/userAccount/username/"+i_username+"/password/"+i_password);
-            HttpResponseMessage response = client.GetAsync(command).Result;
-            
+                  new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = client.GetAsync("api/userAccount?userID=" + i_username).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                Session["username"] = i_username;
-                Response.Redirect("Home.aspx");
-            }
+                // Parse the response body. Blocking! 
+                var result = response.Content.ReadAsAsync<UserAccount>().Result;
 
+
+                if (result.password == i_password)
+                {
+                    Session["username"] = i_username;
+                    Response.Redirect("Home.aspx");
+                }
+            }
             else
             {
-                lblStatus.Text = "Could not retrieve music. Error code: " + response.StatusCode + " reason: Reyner " + response.ReasonPhrase.ToString();
+                lblStatus.Text = "Could not retrieve User. Error code: " + response.StatusCode + " reason: Reyner/Tim " + response.ReasonPhrase.ToString();
             }
         }
 
@@ -58,33 +59,45 @@ namespace EWDTApp
             string username = tbxSignUpUser.Text;
             string password = tbxSignUpPass.Text;
             string email = tbxSignUpEmail.Text;
-            UserAccount u = new UserAccount();
-            u.username = username;
-            u.password = password;
-            u.email = email;
+            Session["email"] = email;
+            HttpClient client = new HttpClient();
 
-            if (RentDBManager.Register(u) == 1)
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var u = new UserAccount() { username = username, password = tbxSignUpPass.Text, email = email };
+
+            HttpResponseMessage response = client.PostAsJsonAsync("api/userAccount", u).Result;
+            if (response.IsSuccessStatusCode)
             {
-                UserClass u1 = new UserClass();
-                u1.TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text);
-                u1.HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text);
-                u1.NRIC = tbxNric.Text;
-                u1.Gender = ddlGender.Text;
-                u1.DoB = tbxDOB.Text;
-                u1.SQ1 = DropDownList1.Text;
-                u1.SQAns1 = tbxSQAnswer1.Text;
-                u1.SQ2 = DropDownList2.Text;
-                u1.SQAns2 = tbxSQAnswer2.Text;
-                u1.Username = username;
+                //Uri gizmoUri = response.Headers.Location;
+                lblStatus.Text = "Account created.";
+                HttpClient client1 = new HttpClient();
 
-                if (RentDBManager.RegisterProfile(u1) == 1)
+                client1.BaseAddress = new Uri("http://localhost:52455/");
+                // Add an Accept header for JSON format. 
+                client1.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var u1 = new UserClass() { Username = username, NRIC = tbxNric.Text, TelephoneNo = Convert.ToInt32(tbxSignUpTeleNo.Text), HandphoneNo = Convert.ToInt32(tbxSignUpHpNo.Text), Gender = ddlGender.Text, DoB = tbxDOB.Text, SQ1 = DropDownList1.Text, SQ2 = DropDownList2.Text, SQAns1 = tbxSQAnswer1.Text, SQAns2 = tbxSQAnswer2.Text };
+
+                HttpResponseMessage response1 = client.PostAsJsonAsync("api/userProfile", u1).Result;
+                if (response1.IsSuccessStatusCode)
                 {
-                    Response.Redirect("Home.aspx");
+                    //Uri gizmoUri = response.Headers.Location;
+                    lblStatus.Text = "Account created.";
+                    Response.Redirect("Login.aspx");
+                }
+                else
+                {
+                    lblStatus.Text = "Could not create account. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
                 }
             }
             else
             {
-                lblStatus.Text = "Registration Failed";
+                lblStatus.Text = "Could not create account. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
             }
         }
     }

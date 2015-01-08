@@ -10,6 +10,7 @@
     <asp:Label ID="lblText" runat="server" Text="Deleting this will result all data lost!!!!!!"></asp:Label>
     <br />
     <br />
+    <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
     <br />
     <asp:Button ID="btnDelete" runat="server" Text="Delete Profile" ForeColor="Black" OnClick="btnDelete_Click" />
     <asp:Button ID="btnBack" runat="server" Text="Back to safety" ForeColor="Black" OnClick="btnBack_Click" />

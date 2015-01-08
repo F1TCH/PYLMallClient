@@ -19,15 +19,25 @@ namespace EWDTApp
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            string nric = Session["NRIC"].ToString();
-            if (RentDBManager.DeleteProfile(((string)Session["username"].ToString())) == 1)
+            string username = Session["username"].ToString();
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.DeleteAsync("api/userProfile/" + username).Result;
+
+            if (response.IsSuccessStatusCode)
             {
-                Response.Redirect("ProfilePage.aspx");
+                //Uri gizmoUri = response.Headers.Location;
+                Response.Redirect("Login.aspx");
             }
             else
             {
-
+                lblStatus.Text = "Could not delete music. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString();
             }
+            
         }
 
         protected void btnBack_Click(object sender, EventArgs e)

@@ -35,7 +35,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
+                    </td>
                     <td>
                         <asp:Button ID="btnBack" runat="server" Text="Back" ForeColor="Black" OnClick="btnBack_Click" />
                     </td>

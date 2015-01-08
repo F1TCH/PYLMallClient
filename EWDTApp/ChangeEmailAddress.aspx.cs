@@ -45,18 +45,27 @@ namespace EWDTApp
         {
             string email = tbxEmail.Text;
             string username = Session["username"].ToString();
+            string password = tbxPassword.Text;
+            
+            HttpClient client = new HttpClient();
 
-            UserAccount u1 = new UserAccount();
-            u1.email = email;
-            u1.username = username;
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            var user = new UserAccount() { username = username, email = email, password = password};
 
-            if (RentDBManager.UpdateEmail(u1) == 1)
+            HttpResponseMessage response = client.PutAsJsonAsync("api/userAccount/" + username, user).Result;
+
+            if (response.IsSuccessStatusCode)
             {
-                Response.Redirect(Request.RawUrl);
+                //Uri gizmoUri = response.Headers.Location;
+                lblStatus.Text = "Emile updated.";
+                Response.Redirect("ProfilePage.aspx");
             }
             else
             {
-                lblStatus.Text = "Change Failed";
+                lblStatus.Text = "Could not update profile. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
             }
         }
     }
