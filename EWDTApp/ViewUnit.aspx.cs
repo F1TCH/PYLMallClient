@@ -1,4 +1,4 @@
-﻿using EWDTApp.Models;
+﻿using EWDTApp.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;

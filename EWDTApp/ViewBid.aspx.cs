@@ -1,4 +1,4 @@
-﻿using EWDTApp.Models;
+﻿using EWDTApp.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +14,30 @@ namespace EWDTApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string username = Session["username"].ToString();
-            BidClass c = RentDBManager.RetrieveBid(username);
-            if (c != null)
+
+            string i_username = Session["username"].ToString();
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                  new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = client.GetAsync("api/bid?userID=" + i_username).Result;
+
+            if (response.IsSuccessStatusCode)
             {
-                lblBiddingAmount.Text = c.BiddingAmt;
-                lblDate.Text = c.Date;
-                lblTime.Text = c.Time;
+                // Parse the response body. Blocking! 
+                var result = response.Content.ReadAsAsync<BidClass>().Result;
+
+                lblBiddingAmount.Text = result.BiddingAmt;
+                DateTime date = Convert.ToDateTime(result.Date);
+                lblDate.Text = date.ToString("dd/MM/yy");
+                lblTime.Text = result.Time;
+            }
+            else
+            {
+                //lblStatus.Text = "Could not retrieve User. Error code: " + response.StatusCode + " reason: Reyner/Tim " + response.ReasonPhrase.ToString();
             }
         }
         protected void btnUpdate_Click(object sender, EventArgs e)

@@ -31,15 +31,6 @@ namespace EWDTApp {
         protected global::System.Web.UI.WebControls.TextBox tbxBiddingAmount;
         
         /// <summary>
-        /// lblPreviousBid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPreviousBid;
-        
-        /// <summary>
         /// lblDate control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace EWDTApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTime;
+        
+        /// <summary>
+        /// lblStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStatus;
         
         /// <summary>
         /// btnUpdateBid control.

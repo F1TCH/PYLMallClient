@@ -292,7 +292,6 @@ C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\zh-Hans\System.Spati
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.dll
 C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.pdb
-C:\Users\Eldrich\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.csprojResolveAssemblyReference.cache
 C:\Users\User\Documents\GitHub\PYLMallClient\EWDTApp\obj\Debug\EWDTApp.dll
 C:\Users\User\Documents\GitHub\PYLMallClient\EWDTApp\bin\EWDTMain.Master

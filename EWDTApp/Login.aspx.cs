@@ -6,11 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using EWDTApp.Models;
+using EWDTApp.Class;
 using System.Net;
 using System.Net.Mail;
 using SendGrid;
-using EWDTApp.Class;
 
 
 namespace EWDTApp

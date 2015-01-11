@@ -33,7 +33,7 @@
                         <asp:Label ID="lblTime" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><asp:Label ID="lblStatus" runat ="server" Text=""></asp:Label></td>
                     <td>
                         <asp:Button ID="btnCreateBid" runat="server" Text="Create Bid" ForeColor="Black" OnClick="btnCreateBid_Click" />
                     </td>

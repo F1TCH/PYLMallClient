@@ -1,4 +1,4 @@
-﻿using EWDTApp.Models;
+﻿using EWDTApp.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,24 +21,33 @@ namespace EWDTApp
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ViewBid.aspx");
         }
 
         protected void btnCreateBid_Click(object sender, EventArgs e)
         {
-            BidClass c = new BidClass();
-            c.BiddingAmt = tbxBiddingAmount.Text;
-            c.Time = lblTime.Text;
-            c.Date = lblDate.Text;
-            c.Username = Session["username"].ToString();
+            string BiddingAmt = tbxBiddingAmount.Text;
+            string Time = lblTime.Text;
+            string Date = lblDate.Text;
+            string Username = Session["username"].ToString();
 
-            if (RentDBManager.CreateBid(c) == 1)
+            HttpClient client = new HttpClient();
+
+            client.BaseAddress = new Uri("http://localhost:52455/");
+            // Add an Accept header for JSON format. 
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            var u = new BidClass() { BiddingAmt = BiddingAmt, Time = Time, Date = Date, Username = Username };
+            
+            HttpResponseMessage response = client.PostAsJsonAsync("api/bid", u).Result;
+            if (response.IsSuccessStatusCode)
             {
-                Response.Redirect("ViewBid.aspx");
+                lblStatus.Text = "Success";
             }
             else
             {
-                Response.Redirect("Home.aspx");
+                lblStatus.Text = "Could not create account. Error code:" + response.StatusCode + ", reason:" + response.ReasonPhrase.ToString() + "<br/>";
             }
         }
     }

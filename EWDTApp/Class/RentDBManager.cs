@@ -5,11 +5,10 @@ using System.Web;
 using System.Collections;
 using System.Data.SqlClient;
 using System.Configuration;
-using EWDTApp.Models;
-using EWDTApp;
 using EWDTApp.Class;
+using EWDTApp;
 
-namespace EWDTApp.Models
+namespace EWDTApp.Class
 {
     public class RentDBManager
     {

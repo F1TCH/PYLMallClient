@@ -19,7 +19,7 @@
                 <tr>
                     <td>Bidding amount: </td>
                     <td>
-                        <asp:TextBox ID="tbxBiddingAmount" runat="server"></asp:TextBox><asp:Label ID="lblPreviousBid" runat="server"></asp:Label></td>
+                        <asp:TextBox ID="tbxBiddingAmount" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Date:</td>
@@ -32,7 +32,7 @@
                         <asp:Label ID="lblTime" runat="server"></asp:Label></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><asp:Label ID ="lblStatus" runat = "server" Text =""></asp:Label></td>
                     <td>
                         <asp:Button ID="btnUpdateBid" runat="server" Text="Update Bid" ForeColor="Black" OnClick="btnUpdateBid_Click" />
                     </td>

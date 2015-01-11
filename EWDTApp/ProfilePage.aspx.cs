@@ -1,5 +1,4 @@
-﻿
-using EWDTApp.Models;
+﻿using EWDTApp.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +15,6 @@ namespace EWDTApp
         protected void Page_Load(object sender, EventArgs e)
         {
             string i_username = Session["username"].ToString();
-
             HttpClient client = new HttpClient();
 
             client.BaseAddress = new Uri("http://localhost:52455/");
@@ -24,24 +22,32 @@ namespace EWDTApp
             client.DefaultRequestHeaders.Accept.Add(
                   new MediaTypeWithQualityHeaderValue("application/json"));
 
+            
             HttpResponseMessage response = client.GetAsync("api/userProfile?userID=" + i_username).Result;
 
             if (response.IsSuccessStatusCode)
             {
                 // Parse the response body. Blocking! 
+                
                 var result = response.Content.ReadAsAsync<UserClass>().Result;
-
+                
+                
                 lblNRIC.Text = result.NRIC;
-                lblEmail.Text = "pheeyx123@gmail.com";
                 lblTeleNum.Text = result.TelephoneNo.ToString();
                 lblHandPhoneNum.Text = result.HandphoneNo.ToString();
                 lblGender.Text = result.Gender;
             }
+                HttpResponseMessage response1 = client.GetAsync("api/userAccount?userID=" + i_username).Result;
+                if (response1.IsSuccessStatusCode)
+                {
+                    var result1 = response1.Content.ReadAsAsync<UserAccount>().Result;
+                    lblEmail.Text = result1.email;
+                }
+            
             else
             {
                 lblStatus.Text = "Could not retrieve User. Error code: " + response.StatusCode + " reason: Reyner/Tim " + response.ReasonPhrase.ToString();
             }
-
         }
 
         protected void btnCreateProfile_Click(object sender, EventArgs e)

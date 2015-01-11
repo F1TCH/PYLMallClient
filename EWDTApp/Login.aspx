@@ -74,7 +74,7 @@
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style6">NRIC:</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tbxNric" runat="server" CssClass="form-control" Width="150px"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxNric" runat="server" CssClass="form-control" Width="150px" TabIndex="6"></asp:TextBox></td>
                 <td></td>
                 <td class="auto-style4">Secret Question 1: </td>
                 <td>
@@ -86,7 +86,7 @@
             <tr>
                 <td class="auto-style1">Password : </td>
                 <td>
-                    <asp:TextBox ID="tbxSignUpPass" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="tbxSignUpPass" runat="server" CssClass="form-control" TextMode="Password" TabIndex="1"></asp:TextBox>
                     <ajaxToolkit:PasswordStrength ID="tbxSignUpPass_PasswordStrength" runat="server" TargetControlID="tbxSignUpPass">
                     </ajaxToolkit:PasswordStrength>
                 </td>
@@ -101,16 +101,16 @@
                 <td></td>
                 <td class="auto-style4">Answer: </td>
                 <td>
-                    <asp:TextBox ID="tbxSQAnswer1" runat="server" CssClass="form-control" Width="272px"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxSQAnswer1" runat="server" CssClass="form-control" Width="272px" TabIndex="8"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Email Address: </td>
                 <td>
-                    <asp:TextBox ID="tbxSignUpEmail" runat="server" CssClass="form-control"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxSignUpEmail" runat="server" CssClass="form-control" TabIndex="3"></asp:TextBox></td>
                 <td class="auto-style2"></td>
                 <td class="auto-style6">Date Of Birth</td>
                 <td class="auto-style5">
-                    <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control" Width="150px"></asp:TextBox>
+                    <asp:TextBox ID="tbxDOB" runat="server" CssClass="form-control" Width="150px" TabIndex="7"></asp:TextBox>
 
                     <ajaxToolkit:CalendarExtender ID="tbxDOB_CalendarExtender" runat="server" TargetControlID="tbxDOB">
                     </ajaxToolkit:CalendarExtender>
@@ -126,19 +126,19 @@
             <tr>
                 <td>Telephone Number: </td>
                 <td>
-                    <asp:TextBox ID="tbxSignUpTeleNo" runat="server" CssClass="form-control"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxSignUpTeleNo" runat="server" CssClass="form-control" TabIndex="4"></asp:TextBox></td>
                 <td class="auto-style2"></td>
                 <td class="auto-style6">&nbsp;</td>
                 <td class="auto-style5">
                     &nbsp;</td>
                 <td></td>
                 <td class="auto-style4">Answer: </td>
-                <td><asp:TextBox ID="tbxSQAnswer2" runat="server" CssClass="form-control" Width="272px"></asp:TextBox></td>
+                <td><asp:TextBox ID="tbxSQAnswer2" runat="server" CssClass="form-control" Width="272px" TabIndex="9"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Handphone Number: </td>
                 <td>
-                    <asp:TextBox ID="tbxSignUpHpNo" runat="server" CssClass="form-control"></asp:TextBox></td>
+                    <asp:TextBox ID="tbxSignUpHpNo" runat="server" CssClass="form-control" TabIndex="5"></asp:TextBox></td>
             </tr>
 
 

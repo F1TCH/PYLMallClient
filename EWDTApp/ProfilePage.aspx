@@ -47,8 +47,7 @@
                 <tr>
                     <td></td>
                     <td>
-                    <asp:Button ID="btnCreateProfile" runat="server" Text="Create Profile" ForeColor="Black" OnClick="btnCreateProfile_Click" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td>

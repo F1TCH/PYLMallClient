@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace EWDTApp.Models
+namespace EWDTApp.Class
 {
     public class BidClass
     {
